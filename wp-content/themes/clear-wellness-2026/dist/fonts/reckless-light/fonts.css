@@ -1,0 +1,36 @@
+/*
+        This font software is the property of Commercial Type.
+
+        You may not modify the font software, use it on another website, or install it on a computer.
+
+        License information is available at http://commercialtype.com/eula
+        For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+*/
+
+@font-face {
+	font-family: 'Reckless Light';
+	src: url('Reckless-Light.woff2') format('woff2'),
+	     url('Reckless-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	}
+
+.Reckless-Light {
+	font-family: 'Reckless Light';
+	font-weight: 300;
+	font-style: normal;
+	}
+
+@font-face {
+	font-family: 'Reckless Light';
+	src: url('Reckless-LightItalic.woff2') format('woff2'),
+	     url('Reckless-LightItalic.woff') format('woff');
+	font-weight: 300;
+	font-style: italic;
+	}
+
+.Reckless-LightItalic {
+	font-family: 'Reckless Light';
+	font-weight: 300;
+	font-style: italic;
+	}

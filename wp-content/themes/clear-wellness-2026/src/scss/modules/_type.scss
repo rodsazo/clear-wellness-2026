@@ -1,0 +1,54 @@
+@use "abstracts" as *;
+
+@at-root :root{
+  --t-trim-size-t: -0.44em;
+  --t-trim-size-b: -0.44em;
+}
+:root{
+  --hoverlink-color: #{$color-wine};
+}
+
+@mixin type{
+
+  .f-semibold{ font-weight: 600; }
+  .f-medium{ font-weight: 500; }
+
+  .t-trim{ margin-top: var(--t-trim-size-t); margin-bottom: var(--t-trim-size-b); }
+  .t-center{ text-align: center; }
+  .t-uppercase{ text-transform: uppercase; }
+
+  .t-20{ @include t-20; }
+  .t-22{ @include t-22; }
+  .t-36{ @include t-36; }
+  .t-48{ @include t-48; }
+  .t-74-italic{ @include t-74-italic; }
+  .t-74{ @include t-74; }
+  .t-100{ @include t-100; }
+
+
+  .t-gradient{
+    background: var(--Gradient-Brand, linear-gradient(220deg, #CE2314 -0.83%, #C02A79 32.26%, #834895 66.35%, #4D9FBD 90.43%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .t-hoverlink{
+    &:hover{
+      color: var(--hoverlink-color);
+    }
+
+    svg{
+      width: 1em;
+      height: 1em;
+      vertical-align: baseline;
+      position: relative;
+      top: 0.12em;
+    }
+  }
+
+  .t-smallmono{
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
