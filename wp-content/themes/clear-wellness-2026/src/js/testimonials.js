@@ -20,19 +20,13 @@ jQuery(function ($){
         $(window).on('resize', function(){resizeContainer( false )});
         $(window).on('load', function(){resizeContainer( true )});
         $sliderSubContent.addClass('active');
-        function resizeContainer( firstLoad ){
-            if( firstLoad ) {
-                $sliderSubContent.height( $slides.eq( currentIndex ).outerHeight());
-            } else{
-                $sliderSubContent.animate({
-                    'height' : $slides.eq( currentIndex ).outerHeight()
-                });
-            }
+        function resizeContainer(){
+            $sliderSubContent.height( $slides.eq( currentIndex ).outerHeight());
         }
 
         function goto(index){
             $slides.eq(currentIndex).fadeOut();
-            $slides.eq(index).css('display', 'grid').hide().fadeIn();
+            $slides.eq(index).fadeIn();
             currentIndex = index;
             resizeContainer();
             clearInterval(interval);

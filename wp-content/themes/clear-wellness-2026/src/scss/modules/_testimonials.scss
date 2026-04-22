@@ -8,6 +8,7 @@
 
     &__slider{
       transition: all 0.2s linear;
+      position: relative;
     }
 
     &__slide{
@@ -17,6 +18,10 @@
          }
       }@else{
         display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
 
         &:first-child{
           display: block;
