@@ -27,17 +27,17 @@
 
     h2{
       font-weight: 600;
-      color: $color-navy;
+      color: black;
     }
 
     h3{
       font-weight: 600;
-      color: $color-navy;
+      color: black;
     }
 
     h4{
       font-weight: 600;
-      color: $color-navy;
+      color: black;
     }
 
     p, h2, h3, h4, ul, ol {
@@ -47,10 +47,6 @@
     hr{
       height: 1px;
       width: 100%;
-      background-image: linear-gradient(to right, currentColor 20%, transparent 0%);
-      background-position: bottom left; /* or top, left, right */
-      background-size: 5px 1px; /* First value: dot width + space, Second value: dot height */
-      background-repeat: repeat-x; /* or repeat-y */
       border: none;
     }
 
@@ -66,10 +62,6 @@
     }
     a{
       font-weight: 700;
-      background-image: linear-gradient(to right, $color-warm-stone);
-      background-size: 100% 2px;
-      background-repeat: no-repeat;
-      background-position: bottom left;
 
       &:hover{
         color: black;
@@ -77,8 +69,7 @@
     }
 
     strong,b{
-      font-weight: 600;
-      color: $color-navy;
+      font-weight: 700;
     }
 
     em,i{
@@ -100,7 +91,7 @@
 
     blockquote{
       margin: 24px 0;
-      background: $color-off-white;
+      background: $color-tertiary-light-gray;
       padding: 40px;
       border-radius: 16px;
 
@@ -131,7 +122,6 @@
 
       .wp-caption-text{
         font-size: 16px;
-        color: $color-navy;
         margin: var(--t-trim-size) 0;
       }
     }

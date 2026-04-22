@@ -6,9 +6,7 @@ class ThemeSetup
 {
 
     const MENU_MAIN = 'main_menu';
-    const MENU_DRAWER = 'drawer_menu';
-    const MENU_MEMBERS = 'members';
-    const MENU_FOOTER = 'footer_links';
+    const MOBILE_MENU = 'mobile_menu';
     function __construct()
     {
         add_theme_support('post-thumbnails');
@@ -21,6 +19,7 @@ class ThemeSetup
         add_filter('tiny_mce_before_init', [ $this, 'limitTinyMceOptions']);
 
         register_nav_menu(self::MENU_MAIN,'Main Menu');
+        register_nav_menu(self::MOBILE_MENU,'Mobile Menu');
     }
 
     public function removeHeaderBump() {

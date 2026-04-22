@@ -24,6 +24,6 @@
 
 <body>
 <?php tracking_codes('tracking_after_body') ?>
-<?php
-get_template_part('parts/menu');
-//get_template_part('parts/mob-menu');
+<?php get_template_part('parts/globalBanner'); ?>
+<div id="wrap">
+    <?php get_template_part('parts/siteHeader'); ?>

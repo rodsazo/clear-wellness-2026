@@ -2,17 +2,17 @@
 
 @use "modules/abstracts" as *;
 
-$adminBg : $color-off-white;
+$adminBg : #f5f5f5;
 
 $adminMenu-bg : #17171a;
 $adminMenu-width: 180px;
 
 $adminRightCol-width : 320px;
 
-$adminColor-accent : #0494de;
-$adminColor-links : #045e8c;
+$adminColor-accent : $color-primary-green;
+$adminColor-links : $color-primary-green;
 $adminColor-titles : black;
-$adminColor-text : #666;
+$adminColor-text : $color-text;
 
 $adminColor-table-borders: #eee;
 $adminColor-table-stripe-bg: color.mix(#eee, white, $weight: 50%);
