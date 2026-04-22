@@ -27,7 +27,7 @@ services:
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: wordpress
     ports:
-      - 8081:80
+      - 80:80
       - 8444:443
 
   pma:

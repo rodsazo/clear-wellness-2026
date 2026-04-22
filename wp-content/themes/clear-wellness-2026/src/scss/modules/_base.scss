@@ -2,13 +2,12 @@
 
 @mixin body_styles{
   &{
-    font-family: 'Figtree', 'Helvetica Neue', Arial, sans-serif;
-    font-size: 28px;
-    font-weight: 400;
-    line-height: 38px;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 20px;
+    line-height: 1.4;
     overflow-x: clip;
-    color: $color-navy;
-    font-feature-settings: 'ss01' on;
+    color: $color-text;
+    // font-feature-settings: 'ss01' on;
   }
 }
 

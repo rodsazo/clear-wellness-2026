@@ -4,15 +4,11 @@
   @include reset( $is_gutenberg );
   @include base( $is_gutenberg );
   @include intersect( $is_gutenberg );
-  @include btn;
-  @include type;
   @include gcBlock;
   @include spacing;
+  @include type;
   @include flow;
   @include stickyHeader;
   @include layout;
   @include wysiwyg;
-  @include barmenu;
-
-  @include home-hero;
 }

@@ -19,13 +19,8 @@ class ThemeSetup
         add_action('enqueue_block_editor_assets', [ $this, 'enqueueGutenbergScripts']);
         add_action('admin_footer', [ $this, 'preventGutenbergLinks' ]);
         add_filter('tiny_mce_before_init', [ $this, 'limitTinyMceOptions']);
-        add_filter('wp_enqueue_scripts', [ $this, 'mi_script_menu']);
-        add_filter('wp_resource_hints', [ $this, 'addFontResourceHints' ], 10, 2);
 
         register_nav_menu(self::MENU_MAIN,'Main Menu');
-        /*register_nav_menu(self::MENU_MEMBERS, 'Members Menu');
-        register_nav_menu(self::MENU_FOOTER, 'Footer Links');
-        register_nav_menu(self::MENU_DRAWER, 'Drawer Menu');*/
     }
 
     public function removeHeaderBump() {
@@ -38,9 +33,7 @@ class ThemeSetup
         $version = $theme->get('Version');
 
         wp_enqueue_style('general_styles', get_template_directory_uri() . '/dist/css/app.css', [],  $version );
-        wp_enqueue_style('general_font', get_template_directory_uri() . '/dist/fonts/reckless-light/fonts.css', [],  $version );
-        wp_enqueue_style('google-fonts-figtree', 'https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap', [], $version );
-        wp_enqueue_style('google-fonts-young-serif', 'https://fonts.googleapis.com/css2?family=Young+Serif&display=swap', [], $version );
+        wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap', [], $version );
         wp_enqueue_script('general_scripts', get_template_directory_uri() . '/dist/js/main.js', ['jquery'], $version, [
             'in_footer' => true
         ] );
@@ -60,25 +53,7 @@ class ThemeSetup
         $version = $theme->get('Version');
 
         wp_enqueue_style('gutenberg', get_template_directory_uri() . '/dist/css/gutenberg.css', [], $version );
-        wp_enqueue_style('general_font', get_template_directory_uri() . '/dist/fonts/reckless-light/fonts.css', [],  $version );
-        wp_enqueue_style('google-fonts-figtree', 'https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap', [], $version );
-        wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap', [], $version );
-        wp_enqueue_style('adobe-fonts', 'https://use.typekit.net/wqz3nuq.css', [], $version );
-    }
-
-    public function addFontResourceHints( $urls, $relation_type )
-    {
-        if ( 'preconnect' !== $relation_type ) {
-            return $urls;
-        }
-
-        $urls[] = 'https://fonts.googleapis.com';
-        $urls[] = [
-            'href' => 'https://fonts.gstatic.com',
-            'crossorigin' => 'anonymous',
-        ];
-
-        return $urls;
+        wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap', [], $version );
     }
 
     public function preventGutenbergLinks ()
@@ -104,9 +79,4 @@ class ThemeSetup
         return $options;
     }
 
-    public function mi_script_menu() {
-        wp_localize_script('mi-menu', 'WP_DATA', array(
-            'isFrontPage' => is_front_page()
-        ));
-    }
 }
