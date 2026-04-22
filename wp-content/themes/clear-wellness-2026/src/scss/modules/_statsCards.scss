@@ -4,8 +4,14 @@
     display: grid;
     gap: 24px;
 
+    @at-root .gcBlock--bg-gray,{
+    @at-root .gcBlock--bg-green{
+      --statsCards-item-bg: white;
+    }
+
     &__item{
-      background: $color-bright-gray;
+      --heading-color: #{$color-green};
+      background: var(--statsCards-item-bg, #{$color-bright-gray});
       padding: 24px;
       border-radius: 16px;
       color: $color-green;

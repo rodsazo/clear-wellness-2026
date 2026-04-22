@@ -17,7 +17,7 @@ $footnote = get_field('footnote');
                 <div class="statsCards__title t-trim">
                     <?php echo $title; ?>
                 </div>
-                <div class="statsCards__number t-trim">
+                <div class="t-h2 t-trim">
                     <?php echo $prefix; ?><span class="statsCards__numberIncrement"><?php echo $number; ?></span><?php echo $suffix; ?>
                 </div>
                 <?php if( $text ): ?>

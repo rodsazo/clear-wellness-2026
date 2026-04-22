@@ -13,6 +13,7 @@
       --mediaText-content-order: 2;
     }
 
+
     &__image{
       img{
         object-fit: cover;
@@ -34,6 +35,26 @@
       }
       &__content{
         order: var(--mediaText-content-order);
+      }
+
+      &--aspect-square{
+        .mediaText__image > img{
+          aspect-ratio: 1;
+        }
+      }
+      &--aspect-fluid{
+        .mediaText__image{
+          align-self: stretch;
+          position: relative;
+          > img{
+            position: absolute;
+            aspect-ratio: auto;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+          }
+        }
       }
     }
   }

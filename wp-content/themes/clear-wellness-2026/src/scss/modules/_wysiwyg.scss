@@ -1,10 +1,17 @@
 @use "abstracts" as *;
 :root{
-  --wysiwyg-ul-space: 8px;
+  --wysiwyg-ul-space: 0.5em;
+  --wysiwyg-space : 1em;
 }
 @mixin wysiwyg {
   .wysiwyg{
 
+    * + *{
+      margin-top: var(--wysiwyg-space);
+    }
+    li + li {
+      margin-top: var(--wysiwyg-ul-space);
+    }
 
     strong,b{
       font-weight: 700;
@@ -15,16 +22,34 @@
     }
 
     ol ,ul{
-      list-style: decimal;        /* Números por defecto */
-      counter-reset: custom-counter; /* Si quieres numeración personalizada */
+      list-style: none;
+      counter-reset: custom-counter;
       padding-left: 1.5em;
 
       li + li {
         margin-top: var(--wysiwyg-ul-space);
       }
+
+      li{
+        position: relative;
+        &::before{
+          position: absolute;
+          left: -1.25em;
+          font-weight: bold;
+          color: $color-light-green;
+        }
+      }
     }
-    ul {
-      list-style: disc;       /* bolitas sólidas */
+
+    ul li::before{
+      content: '•';
+      font-size: 200%;
+      line-height: 0.75;
+      left: -0.75em;
+    }
+    ol li::before{
+      counter-increment: custom-counter;
+      content: counter(custom-counter) ".";
     }
 
     /*
