@@ -1,0 +1,24 @@
+@use "abstracts" as *;
+@mixin btn{
+  .btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 56px;
+    background: $color-primary-green;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0 40px;
+    border-radius: 50px;
+
+    &:hover{
+      background: $color-secondary-dark-green;
+    }
+
+    &--small{
+      padding: 0 24px;
+      height: 40px;
+    }
+  }
+}

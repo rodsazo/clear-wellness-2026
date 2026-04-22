@@ -9,6 +9,10 @@
     left: 0;
     width: 100%;
     z-index: 100;
+    background-image: linear-gradient(180deg, $color-tertiary-light-gray, $color-tertiary-light-gray);
+    background-size: 100% 1px;
+    background-position: bottom left;
+    background-repeat: no-repeat;
 
     &__layout,
     &__height{
