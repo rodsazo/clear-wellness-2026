@@ -1,3 +1,4 @@
+@use "modules/abstracts" as *;
 @use 'modulesList' as *;
 
 .wp-block{
@@ -35,9 +36,7 @@
   }
 }
 .wp-block-post-content::after{
-  background: #24222C;
-  margin: 16px;
-  border-radius: 24px;
+  background: $color-dark-green;
   padding: 80px;
   height: 200px;
   font-size: 60px;
@@ -45,7 +44,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #6E6A7F;
+  color: white;
   text-transform: uppercase;
   font-weight: 700;
   content: 'Footer';

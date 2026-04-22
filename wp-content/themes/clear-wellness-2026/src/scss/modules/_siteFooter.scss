@@ -1,0 +1,79 @@
+@use  "abstracts" as *;
+@mixin siteFooter{
+  .siteFooter{
+    background: $color-dark-green;
+    color: white;
+    padding: 80px 0 0;
+
+    &__top{
+      display: grid;
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid $color-green;
+    }
+
+    &__rightNav{
+      display: flex;
+      column-gap: 24px;
+      row-gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    &__nav{
+      display: flex;
+      align-items: center;
+      column-gap: 24px;
+      row-gap: 16px;
+      flex-wrap: wrap;
+      font-size: 16px;
+      font-weight: bold;
+
+      &--bottom{
+        font-size: 14px;
+        column-gap: 24px !important;
+      }
+    }
+
+    &__socials{
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-top: 40px;
+
+      a:hover{
+        opacity: 0.7;
+      }
+    }
+
+    &__bottom{
+      display: grid;
+      gap: 24px;
+      padding: 32px 0;
+    }
+
+
+    @media screen and (min-width: 1024px){
+      &__top{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+      &__left{
+        max-width: 424px;
+      }
+      &__rightNav,
+      &__nav{
+        gap: 40px;
+      }
+      &__socials{
+        justify-content: flex-end;
+      }
+      &__bottom{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+}

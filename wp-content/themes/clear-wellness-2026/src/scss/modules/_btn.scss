@@ -20,5 +20,15 @@
       padding: 0 24px;
       height: 40px;
     }
+
+    &--hollowWhite{
+      background: transparent;
+      color: white;
+      border: 1px solid white;
+
+      &:hover{
+
+      }
+    }
   }
 }
