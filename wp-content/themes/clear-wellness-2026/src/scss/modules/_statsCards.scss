@@ -4,8 +4,10 @@
     display: grid;
     gap: 24px;
 
-    @at-root .gcBlock--bg-gray,{
-    @at-root .gcBlock--bg-green{
+    @at-root .gcBlock--bg-gray &{
+      --statsCards-item-bg: white;
+    }
+    @at-root .gcBlock--bg-green &{
       --statsCards-item-bg: white;
     }
 

@@ -1,0 +1,38 @@
+<?php
+$content = get_field('content') ?: [];
+?>
+
+<div class="container">
+    <div class="threeCols">
+        <?php foreach( $content as $item ):
+            $image = $item['image'];
+            $title = $item['title'];
+            $content = $item['text'];
+            ?>
+            <div class="threeCols__item">
+                <?php if( $image ): ?>
+                    <div class="threeCols__image">
+                        <?= wp_get_attachment_image( $image, 'medium_large'); ?>
+                    </div>
+                <?php endif; ?>
+
+                <div class="threeCols__content">
+                    <div class="flow flow--24">
+                        <?php if( $title ): ?>
+                            <h3 class="t-h5 t-trim">
+                                <?= $title; ?>
+                            </h3>
+                        <?php endif; ?>
+
+                        <?php if( $content ): ?>
+                            <div class="t-trim">
+                                <?= $content; ?>
+                            </div>
+                        <?php endif; ?>
+
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</div>

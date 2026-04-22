@@ -14,5 +14,6 @@ class ThemeBlocks
         $blocks->addBlock( 'testimonials', 'Testimonials', );
         $blocks->addBlock( 'stats-cards', 'Stats Cards', );
         $blocks->addBlock( 'buttons', 'Button Group', );
+        $blocks->addBlock( 'three-col-content', '3-Column Content' );
     }
 }

@@ -33,31 +33,34 @@ $items = get_field('items') ?: [];
             <?php endforeach; ?>
         </div>
 
-        <div class="testimonials__controls">
-            <button class="testimonials__control testimonials__control--prev" aria-label="Previous">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="#32602F"/>
-                    <mask id="mask0_95_133" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="12" y="12" width="24" height="24">
-                        <rect x="12" y="12" width="24" height="24" fill="#D9D9D9"/>
-                    </mask>
-                    <g mask="url(#mask0_95_133)">
-                        <path d="M22.8 24L26.7 27.9C26.8833 28.0834 26.975 28.3167 26.975 28.6C26.975 28.8834 26.8833 29.1167 26.7 29.3C26.5167 29.4834 26.2833 29.575 26 29.575C25.7167 29.575 25.4833 29.4834 25.3 29.3L20.7 24.7C20.6 24.6 20.5292 24.4917 20.4875 24.375C20.4458 24.2584 20.425 24.1334 20.425 24C20.425 23.8667 20.4458 23.7417 20.4875 23.625C20.5292 23.5084 20.6 23.4 20.7 23.3L25.3 18.7C25.4833 18.5167 25.7167 18.425 26 18.425C26.2833 18.425 26.5167 18.5167 26.7 18.7C26.8833 18.8834 26.975 19.1167 26.975 19.4C26.975 19.6834 26.8833 19.9167 26.7 20.1L22.8 24Z" fill="#32602F"/>
-                    </g>
-                </svg>
-            </button>
+        <?php if( count($items) > 1 ): ?>
 
-            <button class="testimonials__control testimonials__control--next" aria-label="Next">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="#32602F"/>
-                    <mask id="mask0_95_147" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="12" y="12" width="24" height="24">
-                        <rect x="12" y="12" width="24" height="24" fill="#D9D9D9"/>
-                    </mask>
-                    <g mask="url(#mask0_95_147)">
-                        <path d="M24.6 24L20.7 20.1C20.5167 19.9167 20.425 19.6834 20.425 19.4C20.425 19.1167 20.5167 18.8834 20.7 18.7C20.8834 18.5167 21.1167 18.425 21.4 18.425C21.6834 18.425 21.9167 18.5167 22.1 18.7L26.7 23.3C26.8 23.4 26.8709 23.5084 26.9125 23.625C26.9542 23.7417 26.975 23.8667 26.975 24C26.975 24.1334 26.9542 24.2584 26.9125 24.375C26.8709 24.4917 26.8 24.6 26.7 24.7L22.1 29.3C21.9167 29.4834 21.6834 29.575 21.4 29.575C21.1167 29.575 20.8834 29.4834 20.7 29.3C20.5167 29.1167 20.425 28.8834 20.425 28.6C20.425 28.3167 20.5167 28.0834 20.7 27.9L24.6 24Z" fill="#32602F"/>
-                    </g>
-                </svg>
+            <div class="testimonials__controls">
+                <button class="testimonials__control testimonials__control--prev" aria-label="Previous">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="#32602F"/>
+                        <mask id="mask0_95_133" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="12" y="12" width="24" height="24">
+                            <rect x="12" y="12" width="24" height="24" fill="#D9D9D9"/>
+                        </mask>
+                        <g mask="url(#mask0_95_133)">
+                            <path d="M22.8 24L26.7 27.9C26.8833 28.0834 26.975 28.3167 26.975 28.6C26.975 28.8834 26.8833 29.1167 26.7 29.3C26.5167 29.4834 26.2833 29.575 26 29.575C25.7167 29.575 25.4833 29.4834 25.3 29.3L20.7 24.7C20.6 24.6 20.5292 24.4917 20.4875 24.375C20.4458 24.2584 20.425 24.1334 20.425 24C20.425 23.8667 20.4458 23.7417 20.4875 23.625C20.5292 23.5084 20.6 23.4 20.7 23.3L25.3 18.7C25.4833 18.5167 25.7167 18.425 26 18.425C26.2833 18.425 26.5167 18.5167 26.7 18.7C26.8833 18.8834 26.975 19.1167 26.975 19.4C26.975 19.6834 26.8833 19.9167 26.7 20.1L22.8 24Z" fill="#32602F"/>
+                        </g>
+                    </svg>
+                </button>
 
-            </button>
-        </div>
+                <button class="testimonials__control testimonials__control--next" aria-label="Next">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="#32602F"/>
+                        <mask id="mask0_95_147" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="12" y="12" width="24" height="24">
+                            <rect x="12" y="12" width="24" height="24" fill="#D9D9D9"/>
+                        </mask>
+                        <g mask="url(#mask0_95_147)">
+                            <path d="M24.6 24L20.7 20.1C20.5167 19.9167 20.425 19.6834 20.425 19.4C20.425 19.1167 20.5167 18.8834 20.7 18.7C20.8834 18.5167 21.1167 18.425 21.4 18.425C21.6834 18.425 21.9167 18.5167 22.1 18.7L26.7 23.3C26.8 23.4 26.8709 23.5084 26.9125 23.625C26.9542 23.7417 26.975 23.8667 26.975 24C26.975 24.1334 26.9542 24.2584 26.9125 24.375C26.8709 24.4917 26.8 24.6 26.7 24.7L22.1 29.3C21.9167 29.4834 21.6834 29.575 21.4 29.575C21.1167 29.575 20.8834 29.4834 20.7 29.3C20.5167 29.1167 20.425 28.8834 20.425 28.6C20.425 28.3167 20.5167 28.0834 20.7 27.9L24.6 24Z" fill="#32602F"/>
+                        </g>
+                    </svg>
+
+                </button>
+            </div>
+        <?php endif; ?>
     </div>
 </div>
