@@ -3,6 +3,7 @@
   .btn{
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     height: 56px;
     background: $color-green;
@@ -28,6 +29,22 @@
 
       &:hover{
 
+      }
+    }
+
+    &__group{
+      display: flex;
+      gap: 12px;
+      align-items: center;
+
+      &--centered{
+        justify-content: center;
+      }
+
+      @media screen and (max-width: 500px){
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
       }
     }
   }

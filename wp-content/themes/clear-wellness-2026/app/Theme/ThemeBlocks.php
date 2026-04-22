@@ -12,6 +12,7 @@ class ThemeBlocks
         $blocks->addBlock( 'modal-cards', 'Modal Cards', );
         $blocks->addBlock( 'form-image', 'Form and Image', );
         $blocks->addBlock( 'testimonials', 'Testimonials', );
-        $blocks->addBlock( 'stat-cards', 'Stat Cards', );
+        $blocks->addBlock( 'stats-cards', 'Stats Cards', );
+        $blocks->addBlock( 'buttons', 'Button Group', );
     }
 }

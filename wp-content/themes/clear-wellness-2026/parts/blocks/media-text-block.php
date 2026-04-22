@@ -6,6 +6,7 @@ $is_h1 = get_field('is_h1');
 $content = get_field('content');
 $accordion = get_field('accordion') ?: [];
 $buttons = get_field('template_buttons');
+$eyebrow = get_field('eyebrow');
 
 $image = get_field('image');
 $image_position = get_field('image_position');
@@ -25,24 +26,34 @@ $text_class = $is_h1 ? 't-large' : '';
 
         <div class="mediaText__content">
             <div class="flow">
-                <?php if( $title ): ?>
-
-                    <?php if( $is_h1 ): ?>
-                        <h1 class="t-h1 t-trim | intersect fadeIn">
-                            <?= $title; ?>
-                            <?php if( $accent ): ?>
-                                <div class="t-accent"><?= $accent; ?></div>
-                            <?php endif; ?>
-                        </h1>
-                    <?php else: ?>
-                        <h2 class="t-h1 t-trim | intersect fadeIn">
-                            <?= $title; ?>
-                            <?php if( $accent ): ?>
-                                <div class="t-accent"><?= $accent; ?></div>
-                            <?php endif; ?>
-                        </h2>
+                <?php if( $title || $eyebrow ): ?>
+                <div class="flow flow--24">
+                    <?php if( $eyebrow ): ?>
+                        <div class="t-eyebrow t-trim"><?= $eyebrow; ?></div>
                     <?php endif; ?>
+
+                    <?php if( $title ): ?>
+
+                        <?php if( $is_h1 ): ?>
+                            <h1 class="t-h1 t-trim | intersect fadeIn">
+                                <?= $title; ?>
+                                <?php if( $accent ): ?>
+                                    <div class="t-accent"><?= $accent; ?></div>
+                                <?php endif; ?>
+                            </h1>
+                        <?php else: ?>
+                            <h2 class="t-h1 t-trim | intersect fadeIn">
+                                <?= $title; ?>
+                                <?php if( $accent ): ?>
+                                    <div class="t-accent"><?= $accent; ?></div>
+                                <?php endif; ?>
+                            </h2>
+                        <?php endif; ?>
+                    <?php endif; ?>
+
+                </div>
                 <?php endif; ?>
+
 
                 <?php if( $content ): ?>
                     <div class="t-trim wysiwyg <?= $text_class; ?> | intersect fadeIn">

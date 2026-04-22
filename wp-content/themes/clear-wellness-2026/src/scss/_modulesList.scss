@@ -22,4 +22,5 @@
   @include modalCards;
   @include formImage;
   @include testimonials($is_gutenberg);
+  @include statsCards;
 }
