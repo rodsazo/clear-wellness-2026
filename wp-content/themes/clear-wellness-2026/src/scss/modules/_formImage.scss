@@ -1,0 +1,38 @@
+@use "abstracts" as *;
+@mixin formImage{
+  .formImage{
+    display: grid;
+    gap: 40px;
+
+    &__image{
+      position: relative;
+      aspect-ratio: 4 / 4;
+      > img{
+        position: absolute;
+        inset: 0;
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    @media screen and (min-width: 1024px){
+      grid-template-columns: 736fr 616fr;
+      align-items: center;
+      &__image{
+        order: 2;
+        aspect-ratio: auto;
+        align-self: stretch;
+
+        img {
+          width: calc(100% + 4.645vw);
+        }
+      }
+      &__content{
+        padding: 80px 0;
+        order: 1;
+      }
+    }
+  }
+}

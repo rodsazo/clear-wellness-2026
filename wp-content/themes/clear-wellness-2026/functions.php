@@ -39,7 +39,7 @@ function the_accordion ( $accordion )
     ?>
     <div class="accordion__wrap">
         <?php foreach( $accordion as $item ): ?>
-            <div class="accordion js-accordion">
+            <div class="accordion js-accordion | intersect fadeIn">
                 <h3 class="accordion__title js-accordion__title">
                     <?php echo $item['title']; ?>
 

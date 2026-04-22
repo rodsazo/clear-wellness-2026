@@ -1,0 +1,55 @@
+@use "abstracts" as *;
+
+@mixin modalCards{
+  .modalCards{
+    display: grid;
+    gap: 40px;
+    max-width: 320px;
+    margin: 0 auto;
+
+    &__item{
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      cursor: pointer;
+
+      &:hover{
+        .modalCards__image{
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    &__image{
+      transition: all 0.4s ease;
+      img{
+
+        object-fit: cover;
+        object-position: center;
+        height: auto;
+        width: 100%;
+        aspect-ratio: 1;
+      }
+    }
+
+    &__title{
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      align-items: center;
+      font-size: 24px;
+      font-weight: 700;
+      color: $color-green;
+      font-family: Aleo, serif;
+    }
+
+    @media screen and (min-width: 600px){
+      grid-template-columns: 1fr 1fr;
+      max-width: 640px;
+    }
+    @media screen and (min-width: 1200px){
+      grid-template-columns: repeat(4, 1fr);
+      max-width: none;
+    }
+  }
+}

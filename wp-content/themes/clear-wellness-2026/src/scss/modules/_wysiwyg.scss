@@ -5,9 +5,6 @@
 @mixin wysiwyg {
   .wysiwyg{
 
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
 
     strong,b{
       font-weight: 700;

@@ -7,14 +7,14 @@ $text = get_field('text');
 
 <div class="container container--886">
     <div class="flow">
-        <h2 class="t-h2 t-trim text-center">
+        <h2 class="t-h2 t-trim text-center | intersect fadeIn">
             <?= $title; ?>
             <?php if( $accent ): ?>
                 <span class="t-accent"><?= $accent; ?></span>
             <?php endif; ?>
         </h2>
         <?php if( $text ): ?>
-            <div class="t-trim text-center">
+            <div class="t-trim text-center | intersect fadeIn">
                 <?= $text; ?>
             </div>
         <?php endif; ?>
