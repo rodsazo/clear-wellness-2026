@@ -21,5 +21,10 @@
     &--29{ gap: var(--flow-gap-29); }
     &--24{ gap: var(--flow-gap-24); }
     &--16{ gap: var(--flow-gap-16); }
+
+    &.centered{
+      align-items: center;
+      text-align: center;
+    }
   }
 }

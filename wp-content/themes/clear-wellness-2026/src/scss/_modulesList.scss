@@ -21,4 +21,5 @@
   @include mediaText;
   @include modalCards;
   @include formImage;
+  @include testimonials($is_gutenberg);
 }

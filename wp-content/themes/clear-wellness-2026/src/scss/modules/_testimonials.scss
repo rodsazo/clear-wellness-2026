@@ -1,0 +1,71 @@
+@use "abstracts" as *;
+@mixin testimonials($is-gutenberg: false){
+  .testimonials{
+    background: $color-bright-green;
+    border-radius: 16px;
+    padding: 40px 24px;
+    position: relative;
+
+    &__slider{
+      transition: all 0.4s ease;
+    }
+
+    &__slide{
+      @if($is-gutenberg){
+        + .testimonials__slide{
+           margin-top: 40px;
+         }
+      }@else{
+        display: none;
+
+        &:first-child{
+          display: block;
+        }
+      }
+    }
+
+    &__controls{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    &__quote{
+      font-family: Aleo, serif;
+      font-size: 24px;
+      font-style: italic;
+      font-weight: 500;
+      line-height: 140%; /* 33.6px */
+      letter-spacing: -0.01em;
+    }
+    &__author{
+      font-weight: bold;
+    }
+    &__role{
+      font-size: 16px;
+    }
+
+    @media screen and (min-width: 1024px){
+      &__slider{
+        margin: 0 92px;
+      }
+      &__controls{
+        margin: 0;
+      }
+      &__control{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &--prev{
+          left: 28px;
+        }
+        &--next{
+          right: 28px;
+        }
+      }
+    }
+  }
+}
