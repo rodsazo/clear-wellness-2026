@@ -32,7 +32,8 @@ class ThemeSetup
         $version = $theme->get('Version');
 
         wp_enqueue_style('general_styles', get_template_directory_uri() . '/dist/css/app.css', [],  $version );
-        wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap', [], $version );
+        wp_enqueue_style('google_fonts_aleo', 'https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap', [], $version );
+        wp_enqueue_style('google_fonts_public_sans', 'https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap', [], $version );
         wp_enqueue_script('general_scripts', get_template_directory_uri() . '/dist/js/main.js', ['jquery'], $version, [
             'in_footer' => true
         ] );
@@ -52,7 +53,8 @@ class ThemeSetup
         $version = $theme->get('Version');
 
         wp_enqueue_style('gutenberg', get_template_directory_uri() . '/dist/css/gutenberg.css', [], $version );
-        wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap', [], $version );
+        wp_enqueue_style('google_fonts_aleo', 'https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap', [], $version );
+        wp_enqueue_style('google_fonts_public_sans', 'https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap', [], $version );
     }
 
     public function preventGutenbergLinks ()

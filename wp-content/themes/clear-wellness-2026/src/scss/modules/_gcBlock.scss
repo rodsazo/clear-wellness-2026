@@ -2,6 +2,12 @@
 
 @mixin gcBlock{
   .gcBlock{
-    overflow: hidden;
+
+    &--bg-green{
+      background: $color-bright-green;
+    }
+    &--bg-gray{
+      background: $color-bright-gray;
+    }
   }
 }

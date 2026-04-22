@@ -9,65 +9,6 @@
     flex-direction: column;
     gap: 40px;
 
-
-    &--large{
-      font-size: 20px;
-      @media screen and (max-width: 768px){
-        font-size: 16px;
-      }
-    }
-
-    &--tight-ul{
-      --wysiwyg-ul-space: 0;
-    }
-
-    &--small{
-      font-size: 12px;
-    }
-
-    h2{
-      font-weight: 600;
-      color: black;
-    }
-
-    h3{
-      font-weight: 600;
-      color: black;
-    }
-
-    h4{
-      font-weight: 600;
-      color: black;
-    }
-
-    p, h2, h3, h4, ul, ol {
-      margin: var(--t-trim-size) 0;
-    }
-
-    hr{
-      height: 1px;
-      width: 100%;
-      border: none;
-    }
-
-
-    :is(p,h2,h3,h4,ul,ol){
-      padding: 0.5em 0 0.125em;
-      :first-child{
-        padding-top: 0 !important;
-      }
-    }
-    [style*="text-decoration: underline"] {
-      text-underline-offset: 3px;     /* Distancia del subrayado */
-    }
-    a{
-      font-weight: 700;
-
-      &:hover{
-        color: black;
-      }
-    }
-
     strong,b{
       font-weight: 700;
     }
@@ -79,7 +20,7 @@
     ol ,ul{
       list-style: decimal;        /* Números por defecto */
       counter-reset: custom-counter; /* Si quieres numeración personalizada */
-      padding: 4px 0 4px 1.5em;
+      padding-left: 1.5em;
 
       li + li {
         margin-top: var(--wysiwyg-ul-space);
@@ -87,21 +28,6 @@
     }
     ul {
       list-style: disc;       /* bolitas sólidas */
-    }
-
-    blockquote{
-      margin: 24px 0;
-      background: $color-tertiary-light-gray;
-      padding: 40px;
-      border-radius: 16px;
-
-      &:first-child{
-        margin-top: 0;
-      }
-
-      @media screen and (max-width: 600px){
-        padding: 40px 20px;
-      }
     }
 
     /*
@@ -122,7 +48,6 @@
 
       .wp-caption-text{
         font-size: 16px;
-        margin: var(--t-trim-size) 0;
       }
     }
 

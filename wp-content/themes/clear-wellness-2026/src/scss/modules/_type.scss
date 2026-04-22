@@ -1,19 +1,44 @@
 @use "abstracts" as *;
 
 @at-root :root{
-  --t-trim-size-t: -0.44em;
-  --t-trim-size-b: -0.44em;
+  --t-trim-size-t: -0.3em;
+  --t-trim-size-b: -0.3em;
 }
 :root{
-  --hoverlink-color: #{$color-primary-green};
+  --hoverlink-color: #{$color-green};
 }
 
 
 @mixin type{
 
+  .text-center{
+    text-align: center;
+  }
+
   // contains any class that starts with t-
-  [class^="t-"], [class*=" t-"] {
+  [class^="t-h"], [class*=" t-h"] {
     font-family: 'Aleo', serif;
+    color: $color-navy;
+
+    --t-trim-size-t: -0.06em;
+    --t-trim-size-b: -0.16em;
+  }
+
+  .t-trim{
+    &::before,
+    &::after{
+      content: "";
+      display: block;
+    }
+
+    &::before{
+      margin-top: var(--t-trim-size-t);
+    }
+
+    &::after{
+      margin-bottom: var(--t-trim-size-b);
+    }
+
   }
 
 
@@ -62,6 +87,11 @@
     line-height: 110%;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+  }
+
+  .t-accent{
+    color: $color-green;
+    font-style: italic;
   }
 
 }

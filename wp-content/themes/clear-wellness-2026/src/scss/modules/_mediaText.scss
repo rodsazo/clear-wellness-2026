@@ -1,0 +1,40 @@
+@use "abstracts" as *;
+@at-root :root{
+  --mediaText-image-order: 2;
+  --mediaText-content-order: 1;
+}
+@mixin mediaText{
+  .mediaText{
+    display: grid;
+    gap: 40px;
+
+    &--image-left{
+      --mediaText-image-order: 1;
+      --mediaText-content-order: 2;
+    }
+
+    &__image{
+      img{
+        object-fit: cover;
+        object-position: center;
+        height: auto;
+        display: block;
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        border-radius: 16px;
+      }
+    }
+
+    @media screen and (min-width: 1024px){
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+
+      &__image{
+        order: var(--mediaText-image-order);
+      }
+      &__content{
+        order: var(--mediaText-content-order);
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@use "abstracts" as *;
+@mixin accordion{
+  @at-root :root{
+    --accordion-icon-rotate: 0deg;
+  }
+  .accordion{
+
+    &.active{
+      --accordion-icon-rotate: 45deg;
+      --accordion-content-opacity: 1;
+    }
+
+    &__title{
+      // background: $color-light-beige;
+      cursor: pointer;
+      padding: 16px 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: center;
+      font-size: 32px;
+      font-weight: 700;
+      font-family: Aleo, serif;
+
+      &:hover{
+        color: $color-green;
+      }
+
+      svg{
+        transition: all 0.4s ease;
+        transform: rotate(var(--accordion-icon-rotate, 0deg));
+      }
+    }
+
+    &__content{
+      transition: opacity 0.5s ease;
+      opacity: var(--accordion-content-opacity, 0);
+      padding: 24px 0px;
+      border-top: 2px solid $color-light-green;
+      display: none;
+    }
+
+    &__wrap{
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+}

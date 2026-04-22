@@ -5,7 +5,7 @@
     align-items: center;
     gap: 8px;
     height: 56px;
-    background: $color-primary-green;
+    background: $color-green;
     color: white;
     font-size: 18px;
     font-weight: 700;
@@ -13,7 +13,7 @@
     border-radius: 50px;
 
     &:hover{
-      background: $color-secondary-dark-green;
+      background: $color-dark-green;
     }
 
     &--small{

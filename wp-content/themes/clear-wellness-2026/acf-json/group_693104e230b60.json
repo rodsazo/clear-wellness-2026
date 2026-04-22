@@ -35,56 +35,15 @@
                 "id": ""
             },
             "choices": {
-                "cream": "Cream",
-                "white": "White"
+                "white": "White",
+                "green": "Green",
+                "gray": "Gray"
             },
             "default_value": "white",
             "return_format": "value",
             "allow_null": 0,
             "allow_in_bindings": 0,
             "layout": "horizontal"
-        },
-        {
-            "key": "field_693105cbf784d",
-            "label": "Border top",
-            "name": "block_border_top",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "allow_in_bindings": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_693105ebf784e",
-            "label": "Border bottom",
-            "name": "block_border_bottom",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "allow_in_bindings": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
         },
         {
             "key": "field_693105fef784f",
@@ -217,5 +176,8 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1764820629
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1776854991
 }

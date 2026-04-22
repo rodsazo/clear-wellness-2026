@@ -9,10 +9,16 @@
     left: 0;
     width: 100%;
     z-index: 100;
-    background-image: linear-gradient(180deg, $color-tertiary-light-gray, $color-tertiary-light-gray);
+    background-image: linear-gradient(180deg, $color-light-gray, $color-light-gray);
     background-size: 100% 1px;
     background-position: bottom left;
     background-repeat: no-repeat;
+    background-color: white;
+    box-shadow: 0 2px 8px transparent;
+
+    &.sticky{
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
 
     &__layout,
     &__height{
@@ -38,7 +44,7 @@
       gap: 40px;
       font-size: 16px;
       font-weight: 700;
-      color: $color-primary-green;
+      color: $color-green;
     }
 
     &__mobRight{
