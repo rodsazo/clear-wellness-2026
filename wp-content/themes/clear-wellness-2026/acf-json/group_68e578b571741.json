@@ -44,7 +44,7 @@
                 },
                 {
                     "key": "field_68e579406757e",
-                    "label": "Style",
+                    "label": "Arrow icon",
                     "name": "style",
                     "aria-label": "",
                     "type": "radio",
@@ -57,12 +57,11 @@
                         "id": ""
                     },
                     "choices": {
-                        "primary": "Solid",
-                        "secondary": "Hollow",
-                        "tertiary": "Black",
-                        "link": "Link"
+                        "none": "None",
+                        "arrowUp": "Up",
+                        "arrowDown": "Down"
                     },
-                    "default_value": "primary",
+                    "default_value": "none",
                     "return_format": "value",
                     "allow_null": 0,
                     "other_choice": 0,
@@ -92,5 +91,8 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1764358901
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1776856594
 }

@@ -8,5 +8,6 @@ class ThemeBlocks
     function __construct() {
         $blocks = new BlockCategory('Collective Measures');
         $blocks->addBlock( 'media-text', 'Media & Text', );
+        $blocks->addBlock( 'section-title', 'Section Title', );
     }
 }

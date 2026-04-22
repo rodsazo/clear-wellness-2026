@@ -10,6 +10,8 @@ $buttons = get_field('template_buttons');
 $image = get_field('image');
 $image_position = get_field('image_position');
 
+$text_class = $is_h1 ? 't-large' : '';
+
 ?>
 
 <div class="container">
@@ -43,7 +45,7 @@ $image_position = get_field('image_position');
                 <?php endif; ?>
 
                 <?php if( $content ): ?>
-                    <div class="wysiwyg">
+                    <div class="t-trim wysiwyg <?= $text_class; ?>">
                         <?= $content; ?>
                     </div>
                 <?php endif; ?>
