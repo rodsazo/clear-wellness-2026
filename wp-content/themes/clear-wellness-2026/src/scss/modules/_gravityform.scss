@@ -1,0 +1,60 @@
+@use "abstracts" as *;
+@mixin gravityform{
+  .gravityform{
+    .gform_fields{
+      row-gap: 24px !important;
+      column-gap: 24px !important;
+    }
+    .gform_heading{ display: none }
+    .gfield_label{
+      font-weight: 700 !important;
+      font-size: 16px !important;
+      gap: 2px !important;
+    }
+    .gfield_required{
+      color: inherit !important;
+      margin-left: 0 !important;
+      font-weight: bold !important;
+    }
+    input[type=text],
+    input[type=email],
+    input[type=tel],
+    textarea{
+      border: none !important;
+      border-radius: 6px !important;
+      box-shadow: none !important;
+      line-height: 30px !important;
+      font-size: 20px !important;
+      padding: 13px !important;
+      height: auto !important;
+    }
+
+    .gfield--type-html{
+      font-size: 13px !important;
+      line-height: 1.3 !important;
+
+      a{
+        text-decoration: underline !important;
+      }
+    }
+
+    input[type=submit]{
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 8px !important;
+      height: 56px !important;
+      background: $color-green !important;
+      color: white !important;
+      font-size: 18px !important;
+      font-weight: 700 !important;
+      padding: 0 40px !important;
+      border-radius: 50px !important;
+
+      &:hover{
+        background: $color-dark-green !important;
+      }
+    }
+
+  }
+}

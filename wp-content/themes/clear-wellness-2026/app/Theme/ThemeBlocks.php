@@ -23,5 +23,7 @@ class ThemeBlocks
         $blocks->addBlock( 'centered-text', 'Centered Text' );
         $blocks->addBlock( 'news', 'News List' );
         $blocks->addBlock( 'accordion', 'Accordion' );
+        $blocks->addBlock( 'page-hero', 'Page Hero' );
+        $blocks->addBlock( 'centered-form', 'Centered Form' );
     }
 }

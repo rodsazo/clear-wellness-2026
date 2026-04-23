@@ -1,0 +1,16 @@
+@use "abstracts" as *;
+@mixin formBlock{
+  .formBlock{
+    background: $color-bright-gray;
+    padding: 40px 24px;
+    border-radius: 16px;
+
+    @at-root :is(.gcBlock--bg-green,.gcBlock--bg-gray) &{
+      background: white
+    }
+
+    @media screen and (min-width: 768px){
+      padding: 40px;
+    }
+  }
+}
