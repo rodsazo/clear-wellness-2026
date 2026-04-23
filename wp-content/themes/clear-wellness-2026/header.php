@@ -20,6 +20,18 @@
 
     <?php tracking_codes('tracking_before_head') ?>
 
+    <!-- OneTrust Cookies Consent Notice start for clearwellness.com -->
+    <script type="text/javascript" src="https://cdn.cookielaw.org/consent/01966803-6507-7d16-af1b-30d82791199e/OtAutoBlock.js" ></script>
+    <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="01966803-6507-7d16-af1b-30d82791199e" ></script>
+    <script type="text/javascript">
+        function OptanonWrapper() { }
+    </script>
+    <!-- OneTrust Cookies Consent Notice end for clearwellness.com -->
+    <script type="text/javascript">
+        function OptanonWrapper() { }
+    </script>
+    <!-- OneTrust Cookies Consent Notice end -->
+
 </head>
 
 <body>

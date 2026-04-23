@@ -4,7 +4,7 @@ jQuery(function ($){
         const $this = $(el);
         const $sliderSubContent = $this.find('.testimonials__slider');
         const $slides = $this.find('.testimonials__slide');
-        if ($slides.length <= 1) {
+        if (!$slides.length) {
             return;
         }
         const $angleBrackets = $this.find('.testimonials__control');

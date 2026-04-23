@@ -45,6 +45,27 @@
       line-height: 140%; /* 33.6px */
       letter-spacing: -0.01em;
     }
+    &__authorBlock{
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      &--has-picture{
+        text-align: left;
+      }
+    }
+    &__authorPic{
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid rgba(0, 0, 0, 0.1);
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
     &__author{
       font-weight: bold;
     }

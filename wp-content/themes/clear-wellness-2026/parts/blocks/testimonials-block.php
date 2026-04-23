@@ -9,6 +9,8 @@ $items = get_field('items') ?: [];
                 $quote = $item['quote'];
                 $author = $item['author'];
                 $role = $item['role'];
+                $pic = $item['author_pic'] ?? false;
+                $picClass = $pic ? 'testimonials__authorBlock--has-picture' : '';
                 ?>
                 <div class="testimonials__slide">
                     <div class="flow centered">
@@ -20,12 +22,21 @@ $items = get_field('items') ?: [];
                         <div class="testimonials__quote t-trim">
                             <?= $quote; ?>
                         </div>
-                        <div class="flow flow--16">
-                            <div class="testimonials__author t-trim">
-                                <?= $author; ?>
-                            </div>
-                            <div class="testimonials__role t-trim">
-                                <?= $role; ?>
+                        <div class="testimonials__authorBlock <?= $picClass; ?>">
+
+                            <?php if( $pic ): ?>
+                                <div class="testimonials__authorPic">
+                                    <?= wp_get_attachment_image( $pic, 'medium' ); ?>
+                                </div>
+                            <?php endif; ?>
+
+                            <div class="flow flow--<?= $pic ? '8' : '16'; ?>">
+                                <div class="testimonials__author t-trim">
+                                    <?= $author; ?>
+                                </div>
+                                <div class="testimonials__role t-trim">
+                                    <?= $role; ?>
+                                </div>
                             </div>
                         </div>
                     </div>

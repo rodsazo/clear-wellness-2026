@@ -8,6 +8,7 @@
   --flow-gap-29: 29px;
   --flow-gap-24: 24px;
   --flow-gap-16: 16px;
+  --flow-gap-8: 8px;
 }
 
 @mixin flow{
@@ -21,6 +22,7 @@
     &--29{ gap: var(--flow-gap-29); }
     &--24{ gap: var(--flow-gap-24); }
     &--16{ gap: var(--flow-gap-16); }
+    &--8{ gap: var(--flow-gap-8); }
 
     &.centered{
       align-items: center;
