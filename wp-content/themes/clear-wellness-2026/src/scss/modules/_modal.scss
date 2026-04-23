@@ -1,0 +1,75 @@
+@use "abstracts" as *;
+@mixin modal{
+  @at-root body.modal-is-open{
+    overflow: hidden;
+  }
+
+  .modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,.8);
+    backdrop-filter: blur(10px);
+    z-index: 99999;
+    display: none;
+    overflow: auto;
+
+    &__close{
+      cursor: pointer;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 40px;
+      color: $color-navy;
+      z-index: 2;
+    }
+
+    &__content{
+      padding: max(3dvh, 80px) max(3dvh, 20px);
+      position: absolute;
+      inset: 0;
+    }
+
+    &__flex{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100%;
+    }
+
+    &__body{
+      padding: 48px;
+      background: white;
+      border-radius: 24px;
+      max-width: 1024px;
+      width: 100%;
+      box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.12);
+
+
+      @media screen and (max-width: 600px){
+        padding: 40px 16px;
+      }
+    }
+
+    &__video{
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      margin: 0 auto;
+
+      > video,
+      > iframe{
+        background: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center center;
+      }
+    }
+  }
+}

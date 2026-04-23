@@ -35,12 +35,16 @@ $videoId = uniqid();
 
 <div class="modal" id="modal-<?= $videoId; ?>">
     <button class="modal__close">&times;</button>
-    <div class="modal__body">
+    <div class="modal__content">
+        <div class="modal__flex">
+            <div class="modal__body">
 
-    </div>
-    <script type="text/html" class="modal__onOpen">
-        <div class="modal__video">
-            <?= $videoIframe; ?>
+            </div>
+            <script type="text/html" class="modal__onOpen">
+                <div class="modal__video">
+                    <?= $videoIframe; ?>
+                </div>
+            </script>
         </div>
-    </script>
+    </div>
 </div>
