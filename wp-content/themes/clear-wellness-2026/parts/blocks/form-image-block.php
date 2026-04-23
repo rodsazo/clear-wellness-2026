@@ -22,8 +22,10 @@ $text = get_field('text');
                     </div>
                 <?php endif; ?>
 
-                <?php if( $formId ): ?>
-                    <?= $formId; ?>
+                <?php if( $formId && function_exists('gravity_form') ): ?>
+                    <div class="gravityform">
+                        <?php gravity_form( $formId , false, false, false, false, true ); ?>
+                    </div>
                 <?php endif; ?>
             </div>
         </div>

@@ -2,7 +2,6 @@
 @mixin formImage{
   .formImage{
     display: grid;
-    gap: 40px;
 
     &__image{
       position: relative;
@@ -17,9 +16,14 @@
       }
     }
 
+    &__content{
+      padding: 40px 0;
+    }
+
     @media screen and (min-width: 1024px){
       grid-template-columns: 736fr 616fr;
       align-items: center;
+      gap: 40px;
       &__image{
         order: 2;
         aspect-ratio: auto;
