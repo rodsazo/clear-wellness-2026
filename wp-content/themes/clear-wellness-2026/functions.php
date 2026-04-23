@@ -41,7 +41,9 @@ function the_accordion ( $accordion )
         <?php foreach( $accordion as $item ): ?>
             <div class="accordion js-accordion | intersect fadeIn">
                 <h3 class="accordion__title js-accordion__title">
-                    <?php echo $item['title']; ?>
+                    <div class="t-trim t-h4">
+                        <?php echo $item['title']; ?>
+                    </div>
 
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <mask id="mask0_95_397" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">

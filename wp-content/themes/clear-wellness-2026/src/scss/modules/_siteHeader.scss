@@ -32,6 +32,8 @@
       gap: 24px;
     }
 
+    // ─── Desktop right side ───────────────────────────────────────────
+
     &__right{
       display: flex;
       align-items: center;
@@ -42,14 +44,195 @@
       display: flex;
       align-items: center;
       gap: 40px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
       font-size: 16px;
       font-weight: 700;
       color: $color-green;
+
+      // Top-level items
+      > li{
+        position: relative;
+
+        > a{
+          padding: 20px 0;
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          white-space: nowrap;
+        }
+
+        // Caret for parent items
+        &.menu-item-has-children > a::after{
+          content: '';
+          display: block;
+          width: 6px;
+          height: 6px;
+          border-right: 2px solid currentColor;
+          border-bottom: 2px solid currentColor;
+          transform: rotate(45deg) translateY(0);
+          margin-top: -3px;
+          flex-shrink: 0;
+          transition: transform 0.2s ease;
+        }
+
+        // Dropdown panel
+        .sub-menu{
+          position: absolute;
+          top: calc(100%);
+          left: 50%;
+          transform: translateX(-50%);
+          min-width: 200px;
+          background: white;
+          border-radius: 16px;
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+          padding: 8px;
+          list-style: none;
+          margin: 0;
+          visibility: hidden;
+          opacity: 0;
+          transition: opacity 0.15s ease, visibility 0.15s ease;
+          z-index: 10;
+
+          li a{
+            display: block;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 500;
+            color: $color-green;
+            white-space: nowrap;
+
+            &:hover{
+              background: $color-bright-green;
+            }
+          }
+        }
+
+        &:hover{
+          > a::after{
+            transform: translateY(2px) rotate(45deg);
+          }
+          .sub-menu{
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
     }
+
+    // ─── Mobile right (hamburger) ─────────────────────────────────────
 
     &__mobRight{
       display: none;
     }
 
+    &__mobBtn{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 24px;
+      height: 18px;
+      cursor: pointer;
+
+      span{
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: $color-green;
+        border-radius: 2px;
+        transition: transform 0.25s ease, opacity 0.25s ease;
+        transform-origin: center;
+      }
+
+      &.is-open{
+        span:nth-child(1){ transform: translateY(8px) rotate(45deg); }
+        span:nth-child(2){ opacity: 0; }
+        span:nth-child(3){ transform: translateY(-8px) rotate(-45deg); }
+      }
+    }
+
+    // ─── Mobile slide-down menu ───────────────────────────────────────
+
+    &__mobMenu{
+      position: fixed;
+      top: var(--siteHeader-height);
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: white;
+      z-index: 99;
+      overflow-y: auto;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+
+      &.is-open{
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    &__mobMenuInner{
+      padding: 40px 0 64px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    &__mobNav{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+
+      li{
+        border-bottom: 1px solid $color-light-gray;
+
+        > a{
+          display: block;
+          padding: 20px 0;
+          font-family: Aleo, serif;
+          font-size: 32px;
+          font-weight: 700;
+          color: $color-navy;
+          line-height: 1;
+          text-decoration: none;
+        }
+      }
+
+      // Sub-menu shown inline on mobile
+      .sub-menu{
+        list-style: none;
+        margin: 0;
+        padding: 0 0 16px;
+
+        li{
+          border-bottom: none;
+
+          a{
+            font-family: inherit;
+            font-size: 18px;
+            font-weight: 500;
+            color: $color-green;
+            padding: 8px 0;
+          }
+        }
+      }
+    }
+
+    // ─── Responsive breakpoint ────────────────────────────────────────
+
+    @media screen and (max-width: 1024px){
+      &__right{
+        display: none;
+      }
+      &__mobRight{
+        display: flex;
+        align-items: center;
+      }
+    }
   }
 }

@@ -1,5 +1,6 @@
 @use "abstracts" as *;
 
+
 @at-root :root{
   --t-trim-size-t: -0.3em;
   --t-trim-size-b: -0.3em;
@@ -44,12 +45,22 @@
 
   .t-x-large{
     font-size: 24px;
+    @media screen and (max-width: $bp-small-fonts){
+      font-size: 20px;
+    }
   }
   .t-large{
     font-size: 20px;
+    @media screen and (max-width: $bp-small-fonts){
+      font-size: 18px;
+    }
   }
+
   .t-small{
     font-size: 16px;
+    @media screen and (max-width: $bp-small-fonts){
+      font-size: 14px;
+    }
   }
 
   .t-h1{
@@ -57,6 +68,9 @@
     font-weight: 700;
     line-height: 96%;
     letter-spacing: -0.01em;
+    @media screen and (max-width: $bp-small-fonts){
+      font-size: 48px;
+    }
   }
 
   .t-h2{
@@ -64,6 +78,9 @@
     font-weight: 700;
     line-height: 96%;
     letter-spacing: -0.01em;
+    @media screen and (max-width: $bp-small-fonts){
+      font-size: 40px;
+    }
   }
 
   .t-h3{
@@ -71,24 +88,36 @@
     font-weight: 700;
     line-height: 96%;
     letter-spacing: -0.01em;
+    @media screen and (max-width: $bp-small-fonts){
+      font-size: 32px;
+    }
   }
 
   .t-h4{
     font-size: 40px;
     font-weight: 600;
     line-height: 100%;
+    @media screen and (max-width: $bp-small-fonts){
+      font-size: 28px;
+    }
   }
 
   .t-h5{
     font-size: 32px;
     font-weight: 700;
     line-height: 110%;
+    @media screen and (max-width: $bp-small-fonts){
+      font-size: 24px;
+    }
   }
 
   .t-h6{
     font-weight: 600;
     font-size: 24px;
     line-height: 1.2;
+    @media screen and (max-width: $bp-small-fonts){
+      font-size: 20px;
+    }
   }
 
   .t-eyebrow{
@@ -101,6 +130,9 @@
 
     --t-trim-size-t: -0.06em;
     --t-trim-size-b: -0.18em;
+    @media screen and (max-width: $bp-small-fonts){
+      font-size: 15px;
+    }
   }
 
   .t-accent{

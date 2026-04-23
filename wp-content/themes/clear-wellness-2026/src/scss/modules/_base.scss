@@ -8,6 +8,9 @@
     overflow-x: clip;
     color: $color-text;
     // font-feature-settings: 'ss01' on;
+    @media screen and (max-width: $bp-small-fonts){
+      font-size: 16px;
+    }
   }
 }
 

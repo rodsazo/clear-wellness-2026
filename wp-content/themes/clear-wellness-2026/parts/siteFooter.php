@@ -42,6 +42,7 @@ $headerLink = get_field('header_link','options');
                         'theme_location' => \App\Theme\ThemeSetup::MENU_MAIN,
                         'container' => false,
                         'menu_class' => 'siteFooter__nav',
+                        'depth' => 1,
                     ])
                     ?>
                     <?php if( !empty($headerLink) ): ?>
@@ -82,6 +83,7 @@ $headerLink = get_field('header_link','options');
             wp_nav_menu([
                 'theme_location' => \App\Theme\ThemeSetup::MENU_MAIN,
                 'container' => false,
+                'depth' => 1,
                 'menu_class' => 'siteFooter__nav siteFooter__nav--bottom',
             ])
             ?>

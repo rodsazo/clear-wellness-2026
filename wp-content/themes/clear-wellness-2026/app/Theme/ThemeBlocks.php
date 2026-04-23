@@ -22,5 +22,6 @@ class ThemeBlocks
         $blocks->addBlock( 'team', 'Team' );
         $blocks->addBlock( 'centered-text', 'Centered Text' );
         $blocks->addBlock( 'news', 'News List' );
+        $blocks->addBlock( 'accordion', 'Accordion' );
     }
 }

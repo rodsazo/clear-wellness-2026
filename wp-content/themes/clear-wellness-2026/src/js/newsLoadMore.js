@@ -11,19 +11,21 @@ jQuery( function ($){
     );
 
     $(document).on( 'click', '.js-newsLoadMore', function (){
-        const $btn     = $(this);
-        const page     = parseInt( $btn.data('page') ) + 1;
-        const exclude  = $btn.data('exclude') || 0;
-        const nonce    = $btn.data('nonce');
-        const $grid    = $btn.closest('.newsList__list').find('.newsList__grid');
+        const $btn       = $(this);
+        const page       = parseInt( $btn.data('page') ) + 1;
+        const exclude    = $btn.data('exclude') || 0;
+        const categories = $btn.data('categories') || '';
+        const nonce      = $btn.data('nonce');
+        const $grid      = $btn.closest('.newsList__list').find('.newsList__grid');
 
         $btn.prop( 'disabled', true ).text('Loading…');
 
         $.post( themeData.ajaxUrl, {
-            action:  'news_load_more',
-            page:    page,
-            exclude: exclude,
-            nonce:   nonce,
+            action:     'news_load_more',
+            page:       page,
+            exclude:    exclude,
+            categories: categories,
+            nonce:      nonce,
         }, function( response ){
             if( ! response.success ) return;
 

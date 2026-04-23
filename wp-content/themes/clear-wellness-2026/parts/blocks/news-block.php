@@ -2,10 +2,11 @@
 $featured_post       = get_field('featured_post');
 $featured_post_title = get_field('featured_post_title');
 $categories_title    = get_field('categories_title');
+$filter_categories   = get_field('filter_categories') ?: [];
 
 $exclude_ids = $featured_post ? [ $featured_post->ID ] : [];
 
-$list_query = new WP_Query([
+$list_query_args = [
     'post_type'      => 'post',
     'post_status'    => 'publish',
     'posts_per_page' => 12,
@@ -13,7 +14,18 @@ $list_query = new WP_Query([
     'post__not_in'   => $exclude_ids,
     'orderby'        => 'date',
     'order'          => 'DESC',
-]);
+];
+
+if( !empty( $filter_categories ) ) {
+    $list_query_args['tax_query'] = [[
+        'taxonomy' => 'category',
+        'field'    => 'term_id',
+        'terms'    => $filter_categories,
+        'operator' => 'IN',
+    ]];
+}
+
+$list_query = new WP_Query( $list_query_args );
 ?>
 
 <div class="container">
@@ -81,6 +93,7 @@ $list_query = new WP_Query([
                         <button class="btn js-newsLoadMore"
                             data-page="1"
                             data-exclude="<?= $featured_post ? intval( $featured_post->ID ) : ''; ?>"
+                            data-categories="<?= esc_attr( implode( ',', $filter_categories ) ); ?>"
                             data-nonce="<?= wp_create_nonce( 'news_load_more' ); ?>"
                         >Load more</button>
                     </div>

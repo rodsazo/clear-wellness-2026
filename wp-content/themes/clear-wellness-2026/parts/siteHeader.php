@@ -27,9 +27,9 @@ $headerLink = get_field('header_link','options');
                 <?php
                 wp_nav_menu([
                     'theme_location' => \App\Theme\ThemeSetup::MENU_MAIN,
-                    'menu_class' => 'siteHeader__nav',
-                    'container' => false,
-                ])
+                    'menu_class'     => 'siteHeader__nav',
+                    'container'      => false,
+                ]);
                 ?>
                 <?php if( $headerLink['url'] ?? false ): ?>
                     <div class="siteHeader__cta">
@@ -39,11 +39,30 @@ $headerLink = get_field('header_link','options');
             </div>
 
             <div class="siteHeader__mobRight">
-                <button class="siteHeader__mobBtn">
+                <button class="siteHeader__mobBtn" aria-label="Open menu" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="siteHeader__mobMenu" aria-hidden="true">
+        <div class="container">
+            <div class="siteHeader__mobMenuInner">
+                <?php
+                wp_nav_menu([
+                    'theme_location' => \App\Theme\ThemeSetup::MENU_MAIN,
+                    'menu_class'     => 'siteHeader__mobNav',
+                    'container'      => false,
+                ]);
+                ?>
+                <?php if( $headerLink['url'] ?? false ): ?>
+                    <div class="siteHeader__mobCta">
+                        <?php the_button( $headerLink, 'primary' ); ?>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>

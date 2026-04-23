@@ -13,10 +13,11 @@ class NewsAjax
     {
         check_ajax_referer( 'news_load_more', 'nonce' );
 
-        $page    = max( 1, intval( $_POST['page'] ?? 1 ) );
-        $exclude = intval( $_POST['exclude'] ?? 0 );
+        $page       = max( 1, intval( $_POST['page'] ?? 1 ) );
+        $exclude    = intval( $_POST['exclude'] ?? 0 );
+        $categories = array_filter( array_map( 'intval', explode( ',', sanitize_text_field( $_POST['categories'] ?? '' ) ) ) );
 
-        $query = new \WP_Query([
+        $query_args = [
             'post_type'      => 'post',
             'post_status'    => 'publish',
             'posts_per_page' => 12,
@@ -24,7 +25,18 @@ class NewsAjax
             'post__not_in'   => $exclude ? [ $exclude ] : [],
             'orderby'        => 'date',
             'order'          => 'DESC',
-        ]);
+        ];
+
+        if( !empty( $categories ) ) {
+            $query_args['tax_query'] = [[
+                'taxonomy' => 'category',
+                'field'    => 'term_id',
+                'terms'    => $categories,
+                'operator' => 'IN',
+            ]];
+        }
+
+        $query = new \WP_Query( $query_args );
 
         ob_start();
         while ( $query->have_posts() ) : $query->the_post();
