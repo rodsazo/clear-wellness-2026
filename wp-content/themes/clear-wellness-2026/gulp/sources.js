@@ -11,6 +11,7 @@ module.exports = {
         sources: './src/scss/**/*.scss',
         destination: './dist/css',
         modules_dir : './src/scss/modules/',
-        modules_index : './src/scss/_modules-index.scss'
+        modules_index : './src/scss/modules/_index.scss',
+        modules_list : './src/scss/_modulesList.scss'
     }
 }
