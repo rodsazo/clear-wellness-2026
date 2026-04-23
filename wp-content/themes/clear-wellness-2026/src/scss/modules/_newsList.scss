@@ -1,0 +1,114 @@
+@use "abstracts" as *;
+@mixin newsList{
+  .newsList{
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    a:not(.btn){
+      color: inherit;
+      text-decoration: none;
+    }
+
+    &__featured{
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    &__featuredGrid{
+      display: grid;
+      gap: 40px;
+      align-items: center;
+
+      @media screen and (min-width: 1024px){
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    &__featuredImage{
+      display: block;
+      border-radius: 16px;
+      overflow: hidden;
+
+      img{
+        width: 100%;
+        height: auto;
+        display: block;
+        aspect-ratio: 3 / 2;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.4s ease;
+      }
+
+      &:hover img{
+        transform: scale(1.03);
+      }
+    }
+
+    &__list{
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    &__grid{
+      display: grid;
+      gap: 32px;
+
+      @media screen and (min-width: 600px){
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        row-gap: 64px;
+      }
+
+      @media screen and (min-width: 1024px){
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    &__card{
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    &__cardImage{
+      display: block;
+      border-radius: 12px;
+      overflow: hidden;
+
+      img{
+        width: 100%;
+        height: auto;
+        display: block;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.4s ease;
+      }
+
+      &:hover img{
+        transform: scale(1.03);
+      }
+    }
+
+    &__meta{
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      opacity: 0.6;
+      text-transform: uppercase;
+    }
+
+    &__category{
+      font-weight: 700;
+    }
+
+    &__loadMore{
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

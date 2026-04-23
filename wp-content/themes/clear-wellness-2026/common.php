@@ -95,8 +95,6 @@ function is_gutenberg_editor() {
  */
 
 add_action( 'admin_menu', function() {
-    // Hide "Posts"
-    remove_menu_page( 'edit.php' );
     // Hide "Comments"
     remove_menu_page( 'edit-comments.php' );
 }, 20);

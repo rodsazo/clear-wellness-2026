@@ -37,6 +37,9 @@ class ThemeSetup
         wp_enqueue_script('general_scripts', get_template_directory_uri() . '/dist/js/main.js', ['jquery'], $version, [
             'in_footer' => true
         ] );
+        wp_localize_script('general_scripts', 'themeData', [
+            'ajaxUrl' => admin_url('admin-ajax.php'),
+        ]);
     }
 
     function enqueueAdminScripts () : void

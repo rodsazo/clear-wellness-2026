@@ -21,5 +21,6 @@ class ThemeBlocks
         $blocks->addBlock( 'content-cards', 'Content Cards' );
         $blocks->addBlock( 'team', 'Team' );
         $blocks->addBlock( 'centered-text', 'Centered Text' );
+        $blocks->addBlock( 'news', 'News List' );
     }
 }
