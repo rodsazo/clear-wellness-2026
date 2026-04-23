@@ -8,6 +8,10 @@
       position: relative;
       aspect-ratio: 1;
       overflow: hidden;
+
+      &--vertical{
+        aspect-ratio: 4 / 5;
+      }
       > img{
         position: absolute;
         inset: 0;

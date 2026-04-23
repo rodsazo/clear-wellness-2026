@@ -16,7 +16,10 @@ class ThemeBlocks
         $blocks->addBlock( 'buttons', 'Button Group', );
         $blocks->addBlock( 'three-col-content', '3-Column Content' );
         $blocks->addBlock( 'single-quote', 'Single Quote' );
-        $blocks->addBlock( 'video', 'Video' );
+        $blocks->addBlock( 'video', 'Text and Video' );
+        $blocks->addBlock( 'centered-video', 'Centered Video' );
         $blocks->addBlock( 'content-cards', 'Content Cards' );
+        $blocks->addBlock( 'team', 'Team' );
+        $blocks->addBlock( 'centered-text', 'Centered Text' );
     }
 }

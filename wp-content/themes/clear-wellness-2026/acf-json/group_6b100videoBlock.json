@@ -1,5 +1,5 @@
 {
-    "key": "group_6b100videoBlock",
+    "key": "group_6b100videoblock",
     "title": "Block: Video",
     "fields": [
         {
@@ -134,5 +134,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1745366400
+    "modified": 1776966057
 }

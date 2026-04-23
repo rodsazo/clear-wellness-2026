@@ -25,7 +25,9 @@
   @include statsCards;
   @include threeCols;
   @include videoBlock;
+  @include centeredVideo;
   @include contentCards;
+  @include teamCards;
   @include modal;
   @include modalDetail;
 }
