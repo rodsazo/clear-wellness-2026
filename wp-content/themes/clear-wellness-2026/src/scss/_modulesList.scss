@@ -24,4 +24,5 @@
   @include testimonials($is_gutenberg);
   @include statsCards;
   @include threeCols;
+  @include videoBlock;
 }
