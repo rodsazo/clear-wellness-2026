@@ -1,6 +1,6 @@
 <?php
 $title = get_field('title');
-$accordion = get_field('items') ?: [];
+$accordion = get_field('accordion') ?: [];
 
 ?>
 
@@ -9,6 +9,6 @@ $accordion = get_field('items') ?: [];
         <?php if( $title ): ?>
         <h2 class="t-h3 t-trim"><?= $title; ?></h2>
         <?php endif; ?>
-        <?php the_accordion( $accordion ); ?>
+        <?php the_accordion( $accordion, 't-h6' ); ?>
     </div>
 </div>
