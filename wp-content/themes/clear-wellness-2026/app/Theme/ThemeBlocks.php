@@ -17,5 +17,6 @@ class ThemeBlocks
         $blocks->addBlock( 'three-col-content', '3-Column Content' );
         $blocks->addBlock( 'single-quote', 'Single Quote' );
         $blocks->addBlock( 'video', 'Video' );
+        $blocks->addBlock( 'content-cards', 'Content Cards' );
     }
 }

@@ -1,0 +1,50 @@
+@use "abstracts" as *;
+@mixin contentCards{
+  .contentCards{
+    display: grid;
+    gap: 16px;
+
+    @at-root .gcBlock--bg-green{
+      --contentCards-item-bg: white;
+    }
+    @at-root .gcBlock--bg-gray{
+      --contentCards-item-bg: white;
+    }
+
+    &__item{
+      background: var(--contentCards-item-bg, #{$color-bright-gray});
+      padding: 40px 20px;
+      border-radius: 16px;
+    }
+
+    &--cols-2{
+      @media screen and (min-width: 720px){
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    &--cols-3{
+      @media screen and (min-width: 720px){
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media screen and (min-width: 1024px){
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    &--cols-4{
+      @media screen and (min-width: 720px){
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media screen and (min-width: 1024px){
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media screen and (min-width: 720px){
+      &__item{
+        padding: 40px;
+      }
+    }
+  }
+}
