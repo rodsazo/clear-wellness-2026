@@ -7,6 +7,8 @@ class ThemeSetup
 
     const MENU_MAIN = 'main_menu';
     const MOBILE_MENU = 'mobile_menu';
+    const FOOTER_MENU = 'footer_menu';
+
     function __construct()
     {
         add_theme_support('post-thumbnails');
@@ -19,6 +21,7 @@ class ThemeSetup
         add_filter('tiny_mce_before_init', [ $this, 'limitTinyMceOptions']);
 
         register_nav_menu(self::MENU_MAIN,'Main Menu');
+        register_nav_menu(self::FOOTER_MENU,'Footer Menu');
         register_nav_menu(self::MOBILE_MENU,'Mobile Menu');
     }
 

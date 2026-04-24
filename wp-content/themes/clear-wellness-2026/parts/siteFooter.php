@@ -39,7 +39,7 @@ $headerLink = get_field('header_link','options');
                 <div class="siteFooter__rightNav">
                     <?php
                     wp_nav_menu([
-                        'theme_location' => \App\Theme\ThemeSetup::MENU_MAIN,
+                        'theme_location' => \App\Theme\ThemeSetup::FOOTER_MENU,
                         'container' => false,
                         'menu_class' => 'siteFooter__nav',
                         'depth' => 1,
