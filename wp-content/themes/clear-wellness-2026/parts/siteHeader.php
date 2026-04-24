@@ -48,23 +48,23 @@ $headerLink = get_field('header_link','options');
         </div>
     </div>
 
-    <div class="siteHeader__mobMenu" aria-hidden="true">
-        <div class="container">
-            <div class="siteHeader__mobMenuInner">
-                <?php
-                wp_nav_menu([
+</div>
+<div class="siteHeader__height"></div>
+<div class="siteHeader__mobMenu" aria-hidden="true">
+    <div class="container">
+        <div class="siteHeader__mobMenuInner">
+            <?php
+            wp_nav_menu([
                     'theme_location' => \App\Theme\ThemeSetup::MENU_MAIN,
                     'menu_class'     => 'siteHeader__mobNav',
                     'container'      => false,
-                ]);
-                ?>
-                <?php if( $headerLink['url'] ?? false ): ?>
-                    <div class="siteHeader__mobCta">
-                        <?php the_button( $headerLink, 'primary' ); ?>
-                    </div>
-                <?php endif; ?>
-            </div>
+            ]);
+            ?>
+            <?php if( $headerLink['url'] ?? false ): ?>
+                <div class="siteHeader__mobCta">
+                    <?php the_button( $headerLink, 'primary' ); ?>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 </div>
-<div class="siteHeader__height"></div>
