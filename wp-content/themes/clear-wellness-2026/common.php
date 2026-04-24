@@ -120,7 +120,7 @@ function tracking_codes( $field_name ) {
     if( !isset( $enable_tracking ) ) {
         $enable_tracking = get_field( 'enable_tracking', 'options' );
     }
-    if( $enable_tracking ) {
+    if( $enable_tracking || TRUE ) {
         echo get_field( $field_name, 'options' );
     }
 }
