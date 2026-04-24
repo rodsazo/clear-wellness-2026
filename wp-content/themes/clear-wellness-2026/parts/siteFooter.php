@@ -81,7 +81,7 @@ $headerLink = get_field('header_link','options');
             </div>
             <?php
             wp_nav_menu([
-                'theme_location' => \App\Theme\ThemeSetup::MENU_MAIN,
+                'theme_location' => \App\Theme\ThemeSetup::BOTTOM_MENU,
                 'container' => false,
                 'depth' => 1,
                 'menu_class' => 'siteFooter__nav siteFooter__nav--bottom',
