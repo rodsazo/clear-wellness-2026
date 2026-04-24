@@ -82,6 +82,18 @@
       content: counter(custom-counter) ".";
     }
 
+    a{
+      color: $color-green;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.25em;
+      transition: all 0.2s ease;
+
+      &:hover{
+        color: $color-dark-green;
+      }
+    }
+
     /*
     Images
      */
