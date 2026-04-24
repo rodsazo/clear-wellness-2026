@@ -14,11 +14,11 @@ $footnote = get_field('footnote');
             ?>
 
             <div class="statsCards__item | intersect fadeIn">
-                <div class="statsCards__title t-trim">
-                    <?php echo $title; ?>
-                </div>
                 <div class="t-h2 t-trim">
                     <?php echo $prefix; ?><span class="statsCards__numberIncrement"><?php echo $number; ?></span><?php echo $suffix; ?>
+                </div>
+                <div class="statsCards__title t-trim">
+                    <?php echo $title; ?>
                 </div>
                 <?php if( $text ): ?>
                     <div class="statsCards__text t-trim">
