@@ -1,6 +1,11 @@
 <?php
 
 add_image_size('huge', 1600);
+
+add_filter( 'use_block_editor_for_post_type', function( $enabled, $post_type ) {
+    if( $post_type === 'post' ) return false;
+    return $enabled;
+}, 10, 2 );
 define('TEMPLATE_URL', get_stylesheet_directory_uri() );
 define('URL', get_bloginfo('url'));
 
