@@ -25,7 +25,7 @@ while( have_posts() ): the_post();
                     </div>
                     <h1 class="t-h2 t-trim"><?= get_the_title(); ?></h1>
                     <?php if( $lede ): ?>
-                        <p class="t-large t-trim"><?= esc_html( $lede ); ?></p>
+                        <p class="t-large t-trim"><?= strip_tags( $lede ); ?></p>
                     <?php endif; ?>
                 </div>
             </div>
