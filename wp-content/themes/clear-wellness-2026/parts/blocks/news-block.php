@@ -63,7 +63,7 @@ $list_query = new WP_Query( $list_query_args );
 
                             <?php $lede = get_field( 'lede', $featured_post->ID ); ?>
                             <?php if( $lede ): ?>
-                                <p class="t-trim"><?= esc_html( $lede ); ?></p>
+                                <p class="t-trim"><?= strip_tags( $lede ); ?></p>
                             <?php endif; ?>
 
                             <div>
