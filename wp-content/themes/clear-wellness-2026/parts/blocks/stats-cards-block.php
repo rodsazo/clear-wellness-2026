@@ -3,7 +3,7 @@ $cards = get_field('cards') ?: [];
 $footnote = get_field('footnote');
 ?>
 
-<section class="container">
+<div class="container">
     <dl class="statsCards">
         <?php foreach( $cards as $card ):
             $title = $card['title'];
@@ -35,4 +35,4 @@ $footnote = get_field('footnote');
             <?= $footnote; ?>
         </div>
     <?php endif; ?>
-</section>
+</div>

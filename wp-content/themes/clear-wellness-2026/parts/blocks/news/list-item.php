@@ -12,7 +12,7 @@
             <span class="newsList__category"><?= esc_html( $cats[0]->name ); ?></span>
             <span class="newsList__metaDot">&middot;</span>
         <?php endif; ?>
-        <span><?= esc_html( $date ); ?></span>
+        <time datetime="<?= get_the_date('Y-m-d'); ?>"><?= esc_html( $date ); ?></time>
     </div>
 
     <h3 class="t-h6 t-trim">

@@ -3,7 +3,7 @@ $team = get_field('team') ?: [];
 $uid = uniqid();
 ?>
 
-<section class="container">
+<div class="container">
     <div class="teamCards">
         <?php foreach( $team as $i => $member ):
             $image  = $member['picture'];
@@ -28,7 +28,7 @@ $uid = uniqid();
             </button>
         <?php endforeach; ?>
     </div>
-</section>
+</div>
 
 <?php foreach( $team as $i => $member ):
     $image   = $member['picture'];

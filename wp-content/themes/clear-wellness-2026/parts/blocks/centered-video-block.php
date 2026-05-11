@@ -5,7 +5,7 @@ $button_text   = get_field('button_text');
 $videoId = uniqid();
 ?>
 
-<section class="container">
+<div class="container">
     <div class="centeredVideo">
         <div class="centeredVideo__thumb">
             <?= wp_get_attachment_image( $video_image, 'large' ); ?>
@@ -17,7 +17,7 @@ $videoId = uniqid();
             </button>
         </div>
     </div>
-</section>
+</div>
 
 <?php openModal( $videoId, 'Video modal'); ?>
     <script type="text/html" class="modal__onOpen">

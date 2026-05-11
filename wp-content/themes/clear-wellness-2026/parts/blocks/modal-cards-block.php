@@ -3,7 +3,7 @@ $items = get_field('items') ?: [];
 $uid = uniqid();
 ?>
 
-<section class="container">
+<div class="container">
     <div class="modalCards">
         <?php foreach( $items as $i => $item ):
             $image = $item['image'];
@@ -31,7 +31,7 @@ $uid = uniqid();
 
         <?php endforeach; ?>
     </div>
-</section>
+</div>
 
 <?php foreach( $items as $item ):
     $title = $item['title'];
