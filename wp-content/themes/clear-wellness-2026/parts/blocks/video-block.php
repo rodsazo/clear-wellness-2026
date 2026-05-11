@@ -34,18 +34,10 @@ $bid = blockId();
     </div>
 </section>
 
-<div class="modal" id="modal-<?= $videoId; ?>">
-    <button class="modal__close">&times;</button>
-    <div class="modal__content">
-        <div class="modal__flex">
-            <div class="modal__body">
-
-            </div>
-            <script type="text/html" class="modal__onOpen">
-                <div class="modal__video">
-                    <?= $videoIframe; ?>
-                </div>
-            </script>
-        </div>
+<?php openModal( $videoId, 'Video modal' ); ?>
+<script type="text/html" class="modal__onOpen">
+    <div class="modal__video">
+        <?= $videoIframe; ?>
     </div>
-</div>
+</script>
+<?php closeModal(); ?>

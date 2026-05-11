@@ -69,3 +69,30 @@ function the_accordion ( $accordion, $title_class = 't-h4' )
 function blockId(){
     return uniqid('block-');
 }
+
+function openModal( $id, $title = '' ) {
+    ?>
+
+    <div class="modal"
+        id="modal-<?= $id; ?>"
+        role="dialog"
+        aria-modal="true"
+        aria-label="<?= $title; ?>"
+    >
+        <button class="modal__close" aria-label="Close dialog">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal__content">
+            <div class="modal__flex">
+                <div class="modal__body">
+
+    <?php
+}
+function closeModal() {
+    ?>
+                </div> <!-- modal__body -->
+            </div> <!-- modal__flex -->
+        </div> <!-- modal__content -->
+    </div> <!-- modal -->
+    <?php
+}

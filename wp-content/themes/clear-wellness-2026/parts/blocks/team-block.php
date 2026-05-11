@@ -35,33 +35,26 @@ $uid = uniqid();
     $name    = $member['name'];
     $role    = $member['role'];
     $bio     = $member['bio'];
-    $modalId = 'modal-team-' . $uid . '-' . $i;
+    $modalId = 'team-' . $uid . '-' . $i;
     ?>
-    <div class="modal" id="<?= $modalId; ?>">
-        <button class="modal__close">&times;</button>
-        <div class="modal__content">
-            <div class="modal__flex">
-                <div class="modal__body">
-                    <div class="modalDetail">
-                        <div class="modalDetail__image modalDetail__image--vertical">
-                            <?= wp_get_attachment_image( $image, 'large' ); ?>
-                        </div>
-                        <div class="modalDetail__text">
-                            <div class="flow flow--32">
-                                <div class="flow flow--16">
-                                    <h3 class="t-h4 t-trim"><?= esc_html( $name ); ?></h3>
-                                    <?php if( $role ): ?>
-                                        <p class="t-h6 t-trim"><?= esc_html( $role ); ?></p>
-                                    <?php endif; ?>
-                                </div>
-                                <?php if( $bio ): ?>
-                                    <div class="wysiwyg t-trim"><?= $bio; ?></div>
-                                <?php endif; ?>
-                            </div>
-                        </div>
+    <?php openModal( $modalId, $name ); ?>
+        <div class="modalDetail">
+            <div class="modalDetail__image modalDetail__image--vertical">
+                <?= wp_get_attachment_image( $image, 'large' ); ?>
+            </div>
+            <div class="modalDetail__text">
+                <div class="flow flow--32">
+                    <div class="flow flow--16">
+                        <h3 class="t-h4 t-trim"><?= esc_html( $name ); ?></h3>
+                        <?php if( $role ): ?>
+                            <p class="t-h6 t-trim"><?= esc_html( $role ); ?></p>
+                        <?php endif; ?>
                     </div>
+                    <?php if( $bio ): ?>
+                        <div class="wysiwyg t-trim"><?= $bio; ?></div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
-    </div>
+    <?php closeModal(); ?>
 <?php endforeach; ?>

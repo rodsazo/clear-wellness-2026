@@ -19,16 +19,10 @@ $videoId = uniqid();
     </div>
 </section>
 
-<div class="modal" id="modal-<?= $videoId; ?>">
-    <button class="modal__close">&times;</button>
-    <div class="modal__content">
-        <div class="modal__flex">
-            <div class="modal__body"></div>
-        </div>
-    </div>
+<?php openModal( $videoId, 'Video modal'); ?>
     <script type="text/html" class="modal__onOpen">
         <div class="modal__video">
             <?= $video_iframe; ?>
         </div>
     </script>
-</div>
+<?php closeModal(); ?>
