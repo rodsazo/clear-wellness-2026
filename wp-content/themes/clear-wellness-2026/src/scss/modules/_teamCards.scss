@@ -13,6 +13,10 @@
       text-decoration: none;
       color: inherit;
       text-align: center;
+
+      span{
+        display: block;
+      }
     }
 
     &__image{
