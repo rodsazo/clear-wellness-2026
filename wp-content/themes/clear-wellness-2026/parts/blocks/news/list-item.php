@@ -1,4 +1,4 @@
-<div class="newsList__card | intersect fadeIn">
+<article class="newsList__card | intersect fadeIn">
     <a class="newsList__cardImage" href="<?= get_permalink(); ?>">
         <?= get_the_post_thumbnail( null, 'medium_large' ); ?>
     </a>
@@ -18,4 +18,4 @@
     <h3 class="t-h6 t-trim">
         <a href="<?= get_permalink(); ?>"><?= get_the_title(); ?></a>
     </h3>
-</div>
+</article>

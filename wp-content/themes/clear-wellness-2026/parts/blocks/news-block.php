@@ -33,7 +33,7 @@ $bid = blockId();
     <div class="newsList">
 
         <?php if( $featured_post ): ?>
-            <div class="newsList__featured">
+            <article class="newsList__featured">
 
                 <?php if( $featured_post_title ): ?>
                     <h2 id="<?= $bid; ?>-title" class="t-h3 t-trim"><?= esc_html( $featured_post_title ); ?></h2>
@@ -55,7 +55,7 @@ $bid = blockId();
                                     <span class="newsList__category"><?= esc_html( $cats[0]->name ); ?></span>
                                     <span class="newsList__metaDot">&middot;</span>
                                 <?php endif; ?>
-                                <span><?= esc_html( $date ); ?></span>
+                                <time class="newsList__date" datetime="<?= get_the_date('Y-m-d', $featured_post); ?>"><?= esc_html( $date ); ?></time>
                             </div>
 
                             <h3 class="t-h4 t-trim">
@@ -68,12 +68,15 @@ $bid = blockId();
                             <?php endif; ?>
 
                             <div>
-                                <a href="<?= get_permalink( $featured_post ); ?>" class="btn">Read more</a>
+                                <a href="<?= get_permalink( $featured_post ); ?>" class="btn">
+                                    Read more
+                                    <span class="sr-only">about <?= esc_html( get_the_title($featured_post) ); ?></span>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
         <?php endif; ?>
 
         <?php if( $list_query->have_posts() ): ?>
@@ -83,11 +86,13 @@ $bid = blockId();
                     <h2 class="t-h3 t-trim"><?= esc_html( $categories_title ); ?></h2>
                 <?php endif; ?>
 
-                <div class="newsList__grid">
+                <ul class="newsList__grid">
                     <?php while( $list_query->have_posts() ): $list_query->the_post(); ?>
-                        <?php get_template_part( 'parts/blocks/news/list-item' ); ?>
+                        <li>
+                            <?php get_template_part( 'parts/blocks/news/list-item' ); ?>
+                        </li>
                     <?php endwhile; wp_reset_postdata(); ?>
-                </div>
+                </ul>
 
                 <?php if( $list_query->max_num_pages > 1 ): ?>
                     <div class="newsList__loadMore">

@@ -32,7 +32,7 @@ $bid = blockId();
                 <?php if( $title || $eyebrow ): ?>
                 <div class="flow flow--24">
                     <?php if( $eyebrow ): ?>
-                        <div class="t-eyebrow t-trim"><?= $eyebrow; ?></div>
+                        <p class="t-eyebrow t-trim"><?= $eyebrow; ?></p>
                     <?php endif; ?>
 
                     <?php if( $title ): ?>
@@ -41,14 +41,14 @@ $bid = blockId();
                             <h1 id="<?= $bid; ?>-title" class="<?= $title_font; ?> t-trim | intersect fadeIn">
                                 <?= $title; ?>
                                 <?php if( $accent ): ?>
-                                    <div class="t-accent"><?= $accent; ?></div>
+                                    <span class="t-accent"><?= $accent; ?></span>
                                 <?php endif; ?>
                             </h1>
                         <?php else: ?>
                             <h2 id="<?= $bid; ?>-title" class="<?= $title_font; ?> t-trim | intersect fadeIn">
                                 <?= $title; ?>
                                 <?php if( $accent ): ?>
-                                    <div class="t-accent"><?= $accent; ?></div>
+                                    <span class="t-accent"><?= $accent; ?></span>
                                 <?php endif; ?>
                             </h2>
                         <?php endif; ?>
