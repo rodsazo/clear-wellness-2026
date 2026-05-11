@@ -5,14 +5,17 @@ jQuery(function ($) {
     const $contents = $wrap.find('.js-accordion__content');
     $accordions.each(function (i, el) {
       const $this = $(el);
-      const $title = $this.find('.js-accordion__title');
+      const $trigger = $this.find('.js-accordion__title');
       const $content = $this.find('.js-accordion__content');
-      $title.on('click', function () {
-        if (!$this.hasClass('active')) {
+      $trigger.on('click', function () {
+        const isOpen = $this.hasClass('active');
+        if (!isOpen) {
           $accordions.removeClass('active');
+          $accordions.find('.js-accordion__title').attr('aria-expanded', 'false');
           $contents.slideUp();
         }
         $this.toggleClass('active');
+        $trigger.attr('aria-expanded', $this.hasClass('active') ? 'true' : 'false');
         $content.stop().slideToggle();
       });
     });

@@ -10,20 +10,23 @@
       --accordion-content-opacity: 1;
     }
 
-    &__title{
+    &__trigger{
       // background: $color-light-beige;
+      width: 100%;
       cursor: pointer;
       padding: 16px 0;
       display: flex;
       justify-content: space-between;
       gap: 24px;
       align-items: center;
+      text-align: left;
 
       &:hover{
         color: $color-green;
       }
 
       svg{
+        flex-shrink: 0;
         transition: all 0.4s ease;
         transform: rotate(var(--accordion-icon-rotate, 0deg));
       }
