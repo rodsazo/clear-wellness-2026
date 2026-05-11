@@ -9,12 +9,12 @@ $videoId = uniqid();
     <div class="centeredVideo">
         <div class="centeredVideo__thumb">
             <?= wp_get_attachment_image( $video_image, 'large' ); ?>
-            <a class="centeredVideo__playBtn" href="#modal-<?= $videoId; ?>" aria-label="Play video">
+            <button class="centeredVideo__playBtn" aria-haspopup="dialog" data-modal="modal-<?= $videoId; ?>" aria-label="Play video">
                 <span class="centeredVideo__playIcon"></span>
                 <?php if( $button_text ): ?>
                     <span class="centeredVideo__label"><?= esc_html( $button_text ); ?></span>
                 <?php endif; ?>
-            </a>
+            </button>
         </div>
     </div>
 </section>
