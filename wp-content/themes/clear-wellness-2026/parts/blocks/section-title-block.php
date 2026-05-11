@@ -2,12 +2,12 @@
 $title = get_field('title');
 $accent = get_field('accent');
 $text = get_field('text');
-
+$bid = blockId();
 ?>
 
-<div class="container container--886">
+<section class="container container--886" aria-labelledby="<?= $bid; ?>-title">
     <div class="flow">
-        <h2 class="t-h2 t-trim text-center | intersect fadeIn">
+        <h2 class="t-h2 t-trim text-center | intersect fadeIn" id="<?= $bid; ?>-title">
             <?= $title; ?>
             <?php if( $accent ): ?>
                 <span class="t-accent"><?= $accent; ?></span>
@@ -19,4 +19,4 @@ $text = get_field('text');
             </div>
         <?php endif; ?>
     </div>
-</div>
+</section>

@@ -26,16 +26,17 @@ if( !empty( $filter_categories ) ) {
 }
 
 $list_query = new WP_Query( $list_query_args );
+$bid = blockId();
 ?>
 
-<div class="container">
+<section class="container" aria-labelledby="<?= $bid; ?>-title">
     <div class="newsList">
 
         <?php if( $featured_post ): ?>
             <div class="newsList__featured">
 
                 <?php if( $featured_post_title ): ?>
-                    <h2 class="t-h3 t-trim"><?= esc_html( $featured_post_title ); ?></h2>
+                    <h2 id="<?= $bid; ?>-title" class="t-h3 t-trim"><?= esc_html( $featured_post_title ); ?></h2>
                 <?php endif; ?>
 
                 <div class="newsList__featuredGrid">
@@ -103,4 +104,4 @@ $list_query = new WP_Query( $list_query_args );
         <?php endif; ?>
 
     </div>
-</div>
+</section>

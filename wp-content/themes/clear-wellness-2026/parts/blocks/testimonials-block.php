@@ -2,7 +2,7 @@
 $items = get_field('items') ?: [];
 ?>
 
-<div class="container">
+<section class="container">
     <div class="testimonials | intersect fadeIn">
         <div class="testimonials__slider">
             <?php foreach( $items as $item ):
@@ -74,4 +74,4 @@ $items = get_field('items') ?: [];
             </div>
         <?php endif; ?>
     </div>
-</div>
+</section>

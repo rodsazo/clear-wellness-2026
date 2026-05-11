@@ -798,7 +798,7 @@ class GF_System_Report {
 	 * Get Gravity Forms Info.
 	 *
 	 * @since  2.2
-	 * @since next Added Background Notifications.
+	 * @since 2.10.1 Added Background Notifications.
 	 *
 	 * @uses GFCommon::get_version_info()
 	 * @uses GFFormsModel::get_upload_root()

@@ -5,7 +5,7 @@ $text = get_field('text');
 
 ?>
 
-<div class="container container--886 text-center">
+<header class="container container--886 text-center">
     <div class="flow">
         <h1 class="t-h1 t-trim"><?= $title; ?></h1>
 
@@ -15,4 +15,4 @@ $text = get_field('text');
             </div>
         <?php endif; ?>
     </div>
-</div>
+</header>

@@ -3,7 +3,7 @@ $columns = get_field('columns') ?: '3';
 $cards = get_field('cards') ?: [];
 ?>
 
-<div class="container">
+<section class="container">
     <div class="contentCards contentCards--cols-<?= esc_attr($columns); ?>">
         <?php foreach( $cards as $card ):
             $content = $card['content'];
@@ -17,4 +17,4 @@ $cards = get_field('cards') ?: [];
             </div>
         <?php endforeach; ?>
     </div>
-</div>
+</section>

@@ -2,7 +2,7 @@
 $content = get_field('content') ?: [];
 ?>
 
-<div class="container">
+<section class="container">
     <div class="threeCols">
         <?php foreach( $content as $item ):
             $image = $item['image'];
@@ -35,4 +35,4 @@ $content = get_field('content') ?: [];
             </div>
         <?php endforeach; ?>
     </div>
-</div>
+</section>

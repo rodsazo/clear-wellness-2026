@@ -65,3 +65,7 @@ function the_accordion ( $accordion, $title_class = 't-h4' )
     </div>
     <?php
 }
+
+function blockId(){
+    return uniqid('block-');
+}

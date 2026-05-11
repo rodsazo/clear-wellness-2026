@@ -15,9 +15,10 @@ $image_aspect = get_field('image_aspect');
 
 $text_class = $is_h1 ? 't-large' : '';
 
+$bid = blockId();
 ?>
 
-<div class="container">
+<section class="container" aria-labelledby="<?= $bid; ?>-title">
     <div class="mediaText mediaText--image-<?= $image_position; ?> mediaText--aspect-<?= $image_aspect; ?>">
 
         <div class="mediaText__image | intersect fadeIn">
@@ -37,14 +38,14 @@ $text_class = $is_h1 ? 't-large' : '';
                     <?php if( $title ): ?>
 
                         <?php if( $is_h1 ): ?>
-                            <h1 class="<?= $title_font; ?> t-trim | intersect fadeIn">
+                            <h1 id="<?= $bid; ?>-title" class="<?= $title_font; ?> t-trim | intersect fadeIn">
                                 <?= $title; ?>
                                 <?php if( $accent ): ?>
                                     <div class="t-accent"><?= $accent; ?></div>
                                 <?php endif; ?>
                             </h1>
                         <?php else: ?>
-                            <h2 class="<?= $title_font; ?> t-trim | intersect fadeIn">
+                            <h2 id="<?= $bid; ?>-title" class="<?= $title_font; ?> t-trim | intersect fadeIn">
                                 <?= $title; ?>
                                 <?php if( $accent ): ?>
                                     <div class="t-accent"><?= $accent; ?></div>
@@ -78,4 +79,4 @@ $text_class = $is_h1 ? 't-large' : '';
     </div>
 
 
-</div>
+</section>

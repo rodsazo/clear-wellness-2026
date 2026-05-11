@@ -6,9 +6,10 @@ $title = get_field('title');
 $text = get_field('text');
 $footnote = get_field('footnote');
 $videoId = uniqid();
+$bid = blockId();
 ?>
 
-<div class="container">
+<section class="container" aria-labelledby="<?= $bid; ?>-title">
     <div class="videoBlock">
         <div class="videoBlock__video">
             <div class="flow flow--16">
@@ -26,12 +27,12 @@ $videoId = uniqid();
         </div>
         <div class="videoBlock__content">
             <div class="flow flow--24">
-                <h2 class="t-h3 t-trim"><?= $title ?></h2>
+                <h2 class="t-h3 t-trim" id="<?= $bid; ?>-title"><?= $title ?></h2>
                 <p class="t-trim videoBlock__text"><?= $text ?></p>
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <div class="modal" id="modal-<?= $videoId; ?>">
     <button class="modal__close">&times;</button>
