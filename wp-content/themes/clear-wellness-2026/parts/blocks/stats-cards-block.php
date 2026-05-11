@@ -4,7 +4,7 @@ $footnote = get_field('footnote');
 ?>
 
 <section class="container">
-    <div class="statsCards">
+    <dl class="statsCards">
         <?php foreach( $cards as $card ):
             $title = $card['title'];
             $prefix = $card['prefix'];
@@ -14,12 +14,12 @@ $footnote = get_field('footnote');
             ?>
 
             <div class="statsCards__item | intersect fadeIn">
-                <div class="t-h2 t-trim">
-                    <?php echo $prefix; ?><span class="statsCards__numberIncrement"><?php echo $number; ?></span><?php echo $suffix; ?>
-                </div>
-                <div class="statsCards__title t-trim">
+                <dd class="t-h2 t-trim">
+                    <?php echo $prefix; ?><span aria-live="polite" class="statsCards__numberIncrement"><?php echo $number; ?></span><?php echo $suffix; ?>
+                </dd>
+                <dt class="statsCards__title t-trim">
                     <?php echo $title; ?>
-                </div>
+                </dt>
                 <?php if( $text ): ?>
                     <div class="statsCards__text t-trim">
                         <?php echo $text; ?>
@@ -28,7 +28,7 @@ $footnote = get_field('footnote');
 
             </div>
         <?php endforeach; ?>
-    </div>
+    </dl>
 
     <?php if( $footnote ): ?>
         <div class="statsCards__footnote t-trim">
