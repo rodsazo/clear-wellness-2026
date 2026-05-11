@@ -3,13 +3,13 @@ $content = get_field('content') ?: [];
 ?>
 
 <section class="container">
-    <div class="threeCols">
+    <ul class="threeCols">
         <?php foreach( $content as $item ):
             $image = $item['image'];
             $title = $item['title'];
             $content = $item['text'];
             ?>
-            <div class="threeCols__item">
+            <li class="threeCols__item">
                 <?php if( $image ): ?>
                     <div class="threeCols__image">
                         <?= wp_get_attachment_image( $image, 'medium_large'); ?>
@@ -32,7 +32,7 @@ $content = get_field('content') ?: [];
 
                     </div>
                 </div>
-            </div>
+            </li>
         <?php endforeach; ?>
-    </div>
+    </ul>
 </section>

@@ -4,15 +4,15 @@ $items = get_field('items') ?: [];
 
 <section class="container">
     <div class="testimonials | intersect fadeIn">
-        <div class="testimonials__slider">
-            <?php foreach( $items as $item ):
+        <div class="testimonials__slider" role="region" aria-label="Testimonials" aria-live="polite">
+            <?php foreach( $items as $i => $item ):
                 $quote = $item['quote'];
                 $author = $item['author'];
                 $role = $item['role'];
                 $pic = $item['author_pic'] ?? false;
                 $picClass = $pic ? 'testimonials__authorBlock--has-picture' : '';
                 ?>
-                <div class="testimonials__slide">
+                <div class="testimonials__slide" aria-label="Testimonial <?= $i + 1; ?> of <?= count($items); ?>">
                     <figure class="flow centered">
                         <div class="testimonials__quoteMark">
                             <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
