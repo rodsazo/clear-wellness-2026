@@ -27,7 +27,14 @@ $bid = blockId();
         </div>
         <div class="videoBlock__content">
             <div class="flow flow--24">
-                <h2 class="t-h3 t-trim" id="<?= $bid; ?>-title"><?= $title ?></h2>
+                <h2 class="t-h3 t-trim" id="<?= $bid; ?>-title">
+                    <?= esc_html($title) ?>
+                    <?php if( $accent = get_field('accent') ): ?>
+                        <span class="t-accent">
+                            <?= esc_html( $accent ); ?>
+                        </span>
+                    <?php endif; ?>
+                </h2>
                 <p class="t-trim videoBlock__text"><?= $text ?></p>
             </div>
         </div>
