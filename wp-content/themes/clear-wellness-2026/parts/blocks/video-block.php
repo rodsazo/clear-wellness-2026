@@ -14,7 +14,7 @@ $bid = blockId();
         <div class="videoBlock__video">
             <div class="flow flow--16">
                 <div class="videoBlock__videoThumb">
-                     <?= wp_get_attachment_image( $videoImage, 'large' ); ?>
+                     <?= wp_get_attachment_image( $videoImage, 'large', false, ['alt' => ''] ); ?>
 
                     <button aria-haspopup="dialog" aria-label="Play Video" class="videoBlock__playButton" data-modal="modal-<?= $videoId; ?>"></button>
                 </div>
