@@ -255,8 +255,6 @@ jQuery(function ($) {
       $slides.eq(index).fadeIn();
       currentIndex = index;
       resizeContainer();
-      clearInterval(interval);
-      interval = setInterval(next, 8000);
     }
     function next() {
       const index = (currentIndex + 1) % $slides.length;
