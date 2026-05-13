@@ -7,6 +7,7 @@ $content = get_field('content') ?: [];
         <?php foreach( $content as $item ):
             $image = $item['image'];
             $title = $item['title'];
+            $subtitle = $item['subtitle'];
             $content = $item['text'];
             ?>
             <li class="threeCols__item">
@@ -22,6 +23,10 @@ $content = get_field('content') ?: [];
                             <h3 class="t-h5 t-trim">
                                 <?= $title; ?>
                             </h3>
+                        <?php endif; ?>
+
+                        <?php if( $subtitle ): ?>
+                            <p class="t-h6 t-trim"><?= $subtitle; ?></p>
                         <?php endif; ?>
 
                         <?php if( $content ): ?>
