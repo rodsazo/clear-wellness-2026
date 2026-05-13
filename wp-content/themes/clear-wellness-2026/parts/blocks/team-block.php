@@ -12,7 +12,7 @@ $uid = uniqid();
             $role   = $member['role'];
             $modalId = 'modal-team-' . $uid . '-' . $i;
             ?>
-            <button class="teamCards__item | intersect fadeIn" aria-haspopup="dialog" data-modal="<?= $modalId; ?>" aria-label="View bio for <?= esc_html( $name ); ?>">
+            <button class="teamCards__item | intersect fadeIn" aria-haspopup="dialog" data-modal="<?= $modalId; ?>" aria-label="View bio for <?= esc_attr( $name . ' ' . $lastName ); ?>">
                 <span class="teamCards__image">
                     <?= wp_get_attachment_image( $image, 'medium_large' ); ?>
                     <span class="teamCards__plus">

@@ -70,7 +70,7 @@ $bid = blockId();
                             <?php endif; ?>
 
                             <div>
-                                <a href="<?= get_permalink( $featured_post ); ?>" class="btn">
+                                <a href="<?= esc_url(get_permalink( $featured_post )); ?>" class="btn">
                                     Read more
                                     <span class="sr-only">about <?= esc_html( get_the_title($featured_post) ); ?></span>
                                 </a>

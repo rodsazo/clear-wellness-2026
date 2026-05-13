@@ -45,7 +45,7 @@ $bid = blockId();
                                 <?php endif; ?>
                             </h1>
                         <?php else: ?>
-                            <h2 id="<?= $bid; ?>-title" class="<?= $title_font; ?> t-trim | intersect fadeIn">
+                            <h2 id="<?= $bid; ?>-title" class="<?= esc_attr($title_font); ?> t-trim | intersect fadeIn">
                                 <?= esc_html($title); ?>
                                 <?php if( $accent ): ?>
                                     <span class="t-accent"><?= esc_html($accent); ?></span>

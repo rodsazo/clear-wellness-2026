@@ -26,7 +26,7 @@ $content = get_field('content') ?: [];
                         <?php endif; ?>
 
                         <?php if( $subtitle ): ?>
-                            <p class="t-h6 t-trim"><?= $subtitle; ?></p>
+                            <p class="t-h6 t-trim"><?= esc_html($subtitle); ?></p>
                         <?php endif; ?>
 
                         <?php if( $content ): ?>
