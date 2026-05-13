@@ -15,7 +15,7 @@ $footnote = get_field('footnote');
 
             <div class="statsCards__item | intersect fadeIn">
                 <dd class="t-h2 t-trim">
-                    <?php echo $prefix; ?><span aria-live="polite" class="statsCards__numberIncrement"><?php echo $number; ?></span><?php echo $suffix; ?>
+                    <?php echo $prefix; ?><span aria-live="polite" class="statsCards__numberIncrement"><?php echo $number; ?></span><span class="statsCards__suffix"><?php echo $suffix; ?></span>
                 </dd>
                 <dt class="statsCards__title t-trim">
                     <?php echo $title; ?>
