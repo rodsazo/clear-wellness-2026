@@ -8,6 +8,7 @@ $uid = uniqid();
         <?php foreach( $team as $i => $member ):
             $image  = $member['picture'];
             $name   = $member['name'];
+            $lastName = $member['last_name'];
             $role   = $member['role'];
             $modalId = 'modal-team-' . $uid . '-' . $i;
             ?>
@@ -22,7 +23,14 @@ $uid = uniqid();
                     </span>
                 </span>
                 <span class="teamCards__info">
-                    <span class="teamCards__name"><?= esc_html( $name ); ?></span>
+                    <span class="teamCards__name">
+                        <?= esc_html( $name ); ?>
+                        <?php if( $lastName ): ?>
+                            <span class="t-accent">
+                                <?= esc_html($lastName); ?>
+                            </span>
+                        <?php endif; ?>
+                    </span>
                     <span class="teamCards__role"><?= esc_html( $role ); ?></span>
                 </span>
             </button>

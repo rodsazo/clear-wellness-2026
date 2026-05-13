@@ -74,6 +74,28 @@
                     "parent_repeater": "field_6b100team001"
                 },
                 {
+                    "key": "field_6a04aac235e61",
+                    "label": "Last name",
+                    "name": "last_name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6b100team001"
+                },
+                {
                     "key": "field_6b100team004",
                     "label": "Role",
                     "name": "role",
@@ -141,5 +163,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1776966059
+    "modified": 1778690759
 }

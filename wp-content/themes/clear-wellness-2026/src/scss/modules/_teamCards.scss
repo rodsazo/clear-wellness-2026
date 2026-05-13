@@ -51,7 +51,10 @@
       font-family: Aleo, serif;
       font-weight: 700;
       font-size: 20px;
-      color: $color-green;
+
+      span{
+        display: inline;
+      }
     }
 
     &__role{
