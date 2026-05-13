@@ -45,6 +45,14 @@
       right: 12px;
       display: flex;
       pointer-events: none;
+      width: 48px;
+      height: 48px;
+
+      > svg{
+        width: 100%;
+        height: auto;
+        display: block;
+      }
     }
 
     &__name{
