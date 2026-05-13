@@ -8,9 +8,9 @@ $bid = blockId();
 <section class="container container--886" aria-labelledby="<?= $bid; ?>-title">
     <div class="flow">
         <h2 class="t-h2 t-trim text-center | intersect fadeIn" id="<?= $bid; ?>-title">
-            <?= esc_html($title); ?>
+            <?= $title; ?>
             <?php if( $accent ): ?>
-                <span class="t-accent"><?= esc_html($accent); ?></span>
+                <span class="t-accent"><?= $accent; ?></span>
             <?php endif; ?>
         </h2>
         <?php if( $text ): ?>
