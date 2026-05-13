@@ -40,7 +40,7 @@ $bid = blockId();
                 <?php endif; ?>
 
                 <div class="newsList__featuredGrid">
-                    <a class="newsList__featuredImage" href="<?= get_permalink( $featured_post ); ?>">
+                    <a class="newsList__featuredImage" href="<?= esc_url(get_permalink( $featured_post )); ?>">
                         <?= get_the_post_thumbnail( $featured_post, 'large' ); ?>
                     </a>
 
@@ -55,16 +55,18 @@ $bid = blockId();
                                     <span class="newsList__category"><?= esc_html( $cats[0]->name ); ?></span>
                                     <span class="newsList__metaDot">&middot;</span>
                                 <?php endif; ?>
-                                <time class="newsList__date" datetime="<?= get_the_date('Y-m-d', $featured_post); ?>"><?= esc_html( $date ); ?></time>
+                                <time class="newsList__date" datetime="<?= esc_attr(get_the_date('Y-m-d', $featured_post)); ?>"><?= esc_html( $date ); ?></time>
                             </div>
 
                             <h3 class="t-h4 t-trim">
-                                <a href="<?= get_permalink( $featured_post ); ?>"><?= get_the_title( $featured_post ); ?></a>
+                                <a href="<?= esc_url(get_permalink( $featured_post )); ?>">
+                                    <?= esc_html(get_the_title( $featured_post )); ?>
+                                </a>
                             </h3>
 
                             <?php $lede = get_field( 'lede', $featured_post->ID ); ?>
                             <?php if( $lede ): ?>
-                                <p class="t-trim"><?= strip_tags( $lede ); ?></p>
+                                <p class="t-trim"><?= esc_html(wp_strip_all_tags( $lede )); ?></p>
                             <?php endif; ?>
 
                             <div>

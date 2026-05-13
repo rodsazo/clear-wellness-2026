@@ -21,7 +21,7 @@ $content = get_field('content') ?: [];
                     <div class="flow flow--24">
                         <?php if( $title ): ?>
                             <h3 class="t-h5 t-trim">
-                                <?= $title; ?>
+                                <?= esc_html($title); ?>
                             </h3>
                         <?php endif; ?>
 

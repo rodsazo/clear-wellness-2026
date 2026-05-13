@@ -19,7 +19,7 @@ $bid = blockId();
 ?>
 
 <section class="container" aria-labelledby="<?= $bid; ?>-title">
-    <div class="mediaText mediaText--image-<?= $image_position; ?> mediaText--aspect-<?= $image_aspect; ?>">
+    <div class="mediaText mediaText--image-<?= esc_attr($image_position); ?> mediaText--aspect-<?= esc_attr($image_aspect); ?>">
 
         <div class="mediaText__image | intersect fadeIn">
             <?php if( $image ): ?>
@@ -32,23 +32,23 @@ $bid = blockId();
                 <?php if( $title || $eyebrow ): ?>
                 <div class="flow flow--24">
                     <?php if( $eyebrow ): ?>
-                        <p class="t-eyebrow t-trim"><?= $eyebrow; ?></p>
+                        <p class="t-eyebrow t-trim"><?= esc_html($eyebrow); ?></p>
                     <?php endif; ?>
 
                     <?php if( $title ): ?>
 
                         <?php if( $is_h1 ): ?>
                             <h1 id="<?= $bid; ?>-title" class="<?= $title_font; ?> t-trim | intersect fadeIn">
-                                <?= $title; ?>
+                                <?= esc_html($title); ?>
                                 <?php if( $accent ): ?>
-                                    <span class="t-accent"><?= $accent; ?></span>
+                                    <span class="t-accent"><?= esc_html($accent); ?></span>
                                 <?php endif; ?>
                             </h1>
                         <?php else: ?>
                             <h2 id="<?= $bid; ?>-title" class="<?= $title_font; ?> t-trim | intersect fadeIn">
-                                <?= $title; ?>
+                                <?= esc_html($title); ?>
                                 <?php if( $accent ): ?>
-                                    <span class="t-accent"><?= $accent; ?></span>
+                                    <span class="t-accent"><?= esc_html($accent); ?></span>
                                 <?php endif; ?>
                             </h2>
                         <?php endif; ?>

@@ -32,10 +32,10 @@ $items = get_field('items') ?: [];
 
                             <div class="flow flow--<?= $pic ? '8' : '16'; ?>">
                                 <cite class="testimonials__author t-trim">
-                                    <?= $author; ?>
+                                    <?= esc_html($author); ?>
                                 </cite>
                                 <p class="testimonials__role t-trim">
-                                    <?= $role; ?>
+                                    <?= esc_html($role); ?>
                                 </p>
                             </div>
                         </figcaption>

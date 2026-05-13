@@ -14,7 +14,9 @@ $bid = blockId();
         <div class="formImage__content">
             <div class="flow">
                 <?php if( $title ): ?>
-                    <h2 class="t-trim t-h3" id="<?= $bid; ?>-title"><?= $title; ?></h2>
+                    <h2 class="t-trim t-h3" id="<?= $bid; ?>-title">
+                        <?= esc_html($title); ?>
+                    </h2>
                 <?php endif; ?>
                 <?php if( $text ): ?>
                     <div class="t-trim">

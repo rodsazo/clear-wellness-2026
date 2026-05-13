@@ -51,7 +51,7 @@ function the_accordion ( $accordion, $title_class = 't-h4' )
                             aria-expanded="false"
                             aria-controls="<?= $panelId; ?>">
                         <span class="t-trim <?= $title_class; ?>">
-                            <?php echo $item['title']; ?>
+                            <?php echo esc_html($item['title']); ?>
                         </span>
                         <svg aria-hidden="true" focusable="false" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <mask id="<?= $maskId; ?>" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
@@ -85,10 +85,10 @@ function openModal( $id, $title = '' ) {
     ?>
 
     <div class="modal"
-        id="modal-<?= $id; ?>"
+        id="modal-<?= esc_attr($id); ?>"
         role="dialog"
         aria-modal="true"
-        aria-label="<?= $title; ?>"
+        aria-label="<?= esc_attr($title); ?>"
     >
         <button class="modal__close" aria-label="Close dialog">
             <span aria-hidden="true">&times;</span>

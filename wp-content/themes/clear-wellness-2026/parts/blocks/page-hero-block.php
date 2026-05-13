@@ -9,9 +9,9 @@ $bid = blockId();
 <header class="container container--886 text-center" aria-labelledby="<?= $bid; ?>-title">
     <div class="flow">
         <h1 class="t-h1 t-trim" id="<?= $bid; ?>-title">
-            <?= $title; ?>
+            <?= esc_html($title); ?>
             <?php if( $accent ): ?>
-                <span class="t-accent"><?= $accent; ?></span>
+                <span class="t-accent"><?= esc_html($accent); ?></span>
             <?php endif; ?>
         </h1>
 

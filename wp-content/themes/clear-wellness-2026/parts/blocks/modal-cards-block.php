@@ -16,7 +16,7 @@ $uid = uniqid();
                 <?= wp_get_attachment_image( $image, 'medium_large'); ?>
             </span>
             <span class="modalCards__title">
-                <?= $title; ?>
+                <?= esc_html($title); ?>
                 <svg aria-hidden="true" focusable="false" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="40" height="40" rx="20" fill="#32602F"/>
                     <mask id="mask0_98_42" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="8" y="8" width="24" height="24">
@@ -48,7 +48,7 @@ $uid = uniqid();
             <div class="modalDetail__text">
                 <div class="flow flow--24">
                     <h3 class="t-h3 t-trim">
-                        <?= $title; ?>
+                        <?= esc_html($title); ?>
                     </h3>
                     <div class="t-trim">
                         <?= $text; ?>
