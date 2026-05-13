@@ -28,6 +28,19 @@
         object-position: center;
       }
     }
+
+    &__content{
+      text-align: center;
+      .newsList__meta{
+        justify-content: center;
+      }
+      @media screen and (min-width: 1024px){
+        text-align: left;
+        .newsList__meta{
+          justify-content: flex-start;
+        }
+      }
+    }
   }
 
   .postContent{
