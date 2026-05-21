@@ -41,6 +41,7 @@ $uid = uniqid();
 <?php foreach( $team as $i => $member ):
     $image   = $member['picture'];
     $name    = $member['name'];
+    $lastName    = $member['last_name'];
     $role    = $member['role'];
     $bio     = $member['bio'];
     $modalId = 'team-' . $uid . '-' . $i;
@@ -53,7 +54,14 @@ $uid = uniqid();
             <div class="modalDetail__text">
                 <div class="flow flow--32">
                     <div class="flow flow--16">
-                        <h3 class="t-h4 t-trim"><?= esc_html( $name ); ?></h3>
+                        <h3 class="t-h4 t-trim">
+                            <?= esc_html( $name ); ?>
+                            <?php if( $lastName ): ?>
+                                <span class="t-accent">
+                                <?= esc_html($lastName); ?>
+                            </span>
+                            <?php endif; ?>
+                        </h3>
                         <?php if( $role ): ?>
                             <p class="t-h6 t-trim"><?= esc_html( $role ); ?></p>
                         <?php endif; ?>
