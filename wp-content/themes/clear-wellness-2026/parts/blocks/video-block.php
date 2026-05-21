@@ -16,7 +16,9 @@ $bid = blockId();
                 <div class="videoBlock__videoThumb">
                      <?= wp_get_attachment_image( $videoImage, 'large', false, ['alt' => ''] ); ?>
 
-                    <button aria-haspopup="dialog" aria-label="Play Video" class="videoBlock__playButton" data-modal="modal-<?= $videoId; ?>"></button>
+                    <button class="centeredVideo__playBtn" aria-haspopup="dialog" data-modal="modal-<?= $videoId; ?>" aria-label="Play video">
+                        <span class="centeredVideo__playIcon"></span>
+                    </button>
                 </div>
                 <?php if( $footnote ): ?>
                     <div class="t-small t-trim">
