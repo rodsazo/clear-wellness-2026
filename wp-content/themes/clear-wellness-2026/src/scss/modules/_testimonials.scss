@@ -33,8 +33,33 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 16px;
+      gap: 2px;
       margin-top: 40px;
+    }
+    &__control{
+      margin: 0 8px;
+    }
+
+    &__dot{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+
+      &::before{
+        border-radius: 50%;
+        content: '';
+        width: 10px;
+        height: 10px;
+        background: $color-light-gray;
+        transition: all 0.2s ease;
+      }
+      &.active::before,
+      &:hover::before{
+        background: $color-green;
+      }
+
     }
 
     &__quote{
@@ -81,6 +106,7 @@
         margin: 0;
       }
       &__control{
+        margin: 0;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);

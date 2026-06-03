@@ -29,7 +29,6 @@ $items = get_field('items') ?: [];
                                     <?= wp_get_attachment_image( $pic, 'medium' ); ?>
                                 </div>
                             <?php endif; ?>
-
                             <div class="flow flow--<?= $pic ? '8' : '16'; ?>">
                                 <cite class="testimonials__author t-trim">
                                     <?= esc_html($author); ?>
@@ -58,6 +57,11 @@ $items = get_field('items') ?: [];
                         </g>
                     </svg>
                 </button>
+
+                <?php for( $i = 0; $i < count($items); $i ++): ?>
+                    <button class="testimonials__dot" type="button" aria-label="View testimonial #<?= $i + 1; ?>">
+                    </button>
+                <?php endfor; ?>
 
                 <button class="testimonials__control testimonials__control--next" aria-label="Next">
                     <svg aria-hidden="true" focusable="false" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
