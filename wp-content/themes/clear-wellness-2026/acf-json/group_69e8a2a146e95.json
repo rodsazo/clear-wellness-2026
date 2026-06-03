@@ -1,6 +1,6 @@
 {
     "key": "group_69e8a2a146e95",
-    "title": "Block: Media And Text",
+    "title": "Block: Common Options",
     "fields": [
         {
             "key": "field_69e8a2a1eb974",
@@ -412,5 +412,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1780514379
+    "modified": 1780514493
 }
