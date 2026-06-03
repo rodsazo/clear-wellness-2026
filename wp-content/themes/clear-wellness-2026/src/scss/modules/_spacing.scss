@@ -3,10 +3,10 @@
 /* [Desktop size] [Mobile size] */
 $sizes :
   40 32,
-  64 48,
-  80 64,
-  96 72,
-  120 96;
+  64 40,
+  80 48,
+  96 64,
+  120 72;
 
 :root{
   @each $size, $responsive in $sizes {
