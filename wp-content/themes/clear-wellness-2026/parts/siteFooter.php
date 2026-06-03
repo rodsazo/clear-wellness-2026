@@ -85,7 +85,7 @@ $headerLink = get_field('header_link','options');
         </div>
 
         <div class="siteFooter__bottom">
-            <div class="t-small t-trim">
+            <div class="t-trim">
                 © <?= date('Y'); ?> ClearWellness, LLC. All rights reserved.
             </div>
             <?php

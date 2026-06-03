@@ -29,8 +29,11 @@
       font-weight: bold;
 
       &--bottom{
-        font-size: 14px;
+        font-size: 13px;
+        -moz-column-gap: 24px !important;
         column-gap: 24px !important;
+        row-gap: 12px !important;
+        justify-content: flex-end;
       }
     }
 
@@ -50,6 +53,7 @@
       display: grid;
       gap: 24px;
       padding: 32px 0;
+      font-size: 14px;
     }
 
 
