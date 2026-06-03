@@ -27,6 +27,14 @@
       font-size: 20px !important;
       padding: 13px !important;
       height: auto !important;
+      transition: all 0.2s ease !important;
+      outline: 2px solid transparent !important;
+
+      &:focus{
+        outline: 2px solid $color-green !important;
+        box-shadow: none !important;
+      }
+
     }
 
     .gfield--type-html{
