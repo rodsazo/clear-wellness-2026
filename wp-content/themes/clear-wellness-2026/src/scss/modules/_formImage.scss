@@ -5,12 +5,16 @@
 
     &__image{
       position: relative;
-      aspect-ratio: 4 / 4;
+      aspect-ratio: 5 / 4;
+      border-radius: 16px;
+      overflow: hidden;
+      align-self: center;
+
       > img{
         position: absolute;
         inset: 0;
         object-fit: cover;
-        object-position: center;
+        object-position: 50% 10%;
         height: 100%;
         width: 100%;
       }
@@ -26,8 +30,6 @@
       gap: 40px;
       &__image{
         order: 2;
-        aspect-ratio: auto;
-        align-self: stretch;
 
         img {
           width: calc(100% + 4.645vw);
