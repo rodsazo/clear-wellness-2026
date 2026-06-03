@@ -33,7 +33,9 @@
         -moz-column-gap: 24px !important;
         column-gap: 24px !important;
         row-gap: 12px !important;
-        justify-content: flex-end;
+        @media screen and (min-width: 1024px){
+          justify-content: flex-end;
+        }
       }
     }
 
