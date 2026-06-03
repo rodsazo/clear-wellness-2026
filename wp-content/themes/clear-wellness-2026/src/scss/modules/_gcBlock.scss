@@ -9,5 +9,9 @@
     &--bg-gray{
       background: $color-bright-gray;
     }
+
+    &--visibility-hidden{
+      opacity: 0.5;
+    }
   }
 }

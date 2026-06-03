@@ -75,6 +75,13 @@ class BlockCategory
     }
 
     function renderBlock( $block, $content = '', $is_preview = false, $post_id = 0, $wp_block = false, $context = false ) {
+
+        $visibility = get_field('block_visibility');
+
+        if( $visibility === 'hidden' && !is_admin()) {
+            return;
+        }
+
         $is_live_preview = $block['data']['is_preview'] ?? false;
 
         $block_name = $block['name'];
@@ -93,6 +100,7 @@ class BlockCategory
         $bottom_inside_spacing = get_field('block_bottom_inside_spacing');
         $block_border_top = get_field('block_border_top');
         $block_border_bottom = get_field('block_border_bottom');
+
 
         $extra_classes = [];
         if( $top_spacing ) {
@@ -118,6 +126,9 @@ class BlockCategory
         }
         if( $block_border_bottom ) {
             $extra_classes[] = 'border-bottom';
+        }
+        if( $visibility ) {
+            $extra_classes[] = 'gcBlock--visibility-' . $visibility;
         }
 
         $anchor_id = get_field('block_anchor_id');
