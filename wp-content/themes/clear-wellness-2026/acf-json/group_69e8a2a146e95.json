@@ -364,7 +364,7 @@
         },
         {
             "key": "field_69e8ee6221565",
-            "label": "Image height (desktop)",
+            "label": "Image height",
             "name": "image_aspect",
             "aria-label": "",
             "type": "radio",
@@ -379,7 +379,8 @@
             "choices": {
                 "normal": "3\/4 (horizontal)",
                 "square": "Square",
-                "fluid": "Match text height"
+                "fluid": "Match text (desktop)",
+                "natural": "Original image height"
             },
             "default_value": "",
             "return_format": "value",
@@ -411,5 +412,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1776873121
+    "modified": 1780514379
 }

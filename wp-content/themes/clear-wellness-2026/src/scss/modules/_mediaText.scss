@@ -56,6 +56,13 @@
           }
         }
       }
+      &--aspect-natural{
+        .mediaText__image > img{
+          aspect-ratio: auto;
+          height: auto;
+          width: 100%;
+        }
+      }
     }
   }
 }
