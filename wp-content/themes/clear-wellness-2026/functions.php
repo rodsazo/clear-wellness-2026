@@ -81,10 +81,11 @@ function blockId(){
     return uniqid('block-');
 }
 
-function openModal( $id, $title = '' ) {
+function openModal( $id, $title = '', $small = false ) {
+    $small_class = $small ? 'modal--small' : '';
     ?>
 
-    <div class="modal"
+    <div class="modal <?= $small_class; ?>"
         id="modal-<?= esc_attr($id); ?>"
         role="dialog"
         aria-modal="true"

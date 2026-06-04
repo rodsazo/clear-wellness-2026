@@ -16,6 +16,12 @@
     display: none;
     overflow: auto;
 
+    &--small{
+      .modal__body{
+        padding: 0;
+      }
+    }
+
     &__close{
       cursor: pointer;
       position: fixed;

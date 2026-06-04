@@ -43,7 +43,7 @@ $bid = blockId();
     </div>
 </section>
 
-<?php openModal( $videoId, 'Video modal' ); ?>
+<?php openModal( $videoId, 'Video modal', true ); ?>
 <script type="text/html" class="modal__onOpen">
     <div class="modal__video">
         <?= $videoIframe; ?>
