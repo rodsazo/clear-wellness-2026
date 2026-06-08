@@ -122,4 +122,11 @@
   *, *::before, *::after{
     box-sizing: border-box;
   }
+
+  strong, b{
+    font-weight: bold;
+  }
+  em, i{
+    font-style: italic;
+  }
 }
